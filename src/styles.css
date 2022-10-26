@@ -1,3 +1,13 @@
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 /*INTERFAZ INICIO DE SESION/REGISTRO*/
 #login-box {
     
@@ -26,6 +36,16 @@
     
 }
 
+input:invalid{
+    animation: shake .3s;
+}
+
+@keyframes shake{
+    25% {transform: translateX(4px);}
+    50% {transform: translateX(-4px);}
+    75% {transform: translateX(4px);}
+}
+
 #login-box .form .item input {
     width: 200px; 
     border: 10; 
@@ -50,8 +70,12 @@
     font-size: 18px; 
     color: white; 
     border-radius: 25px; 
-    background: black;
+    background: linear-gradient(45deg, rgb(59, 69, 206), #231b41) ;
+    animation: login-box 10s infinite;
 }
+
+
+
 
 
 body{
@@ -62,9 +86,20 @@ body{
  
 }
 
+
+
 /*FIN DE INTERFAZ INICIO DE SESION/REGISTRO*/
 
 /*BARRA DE NAVEGACION*/
+nav ul a,
+nav .brand-logo {
+  color: none
+  ;
+}
+.sidenav-trigger {
+    color: #26a69a;
+  }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -107,4 +142,60 @@ ul {
     top: 0;
     width: 100%;
 }
+
+
+
 /*BARRA DE NAVEGACION*/
+
+
+
+
+
+
+  /*FOOTER*/
+
+  .container-footer{
+    width: 100%;
+    padding: 90px 0;
+    background: #3B4094;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 70px;
+  }
+
+  .container-footer footer{
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .container-footer footer .logo-footer{
+    text-align: center;
+
+  }
+
+  .container-footer footer .logo-footer img{
+     width: 100px;
+  }
+
+  .container-footer footer .redes-footer{
+    display:  flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .container-footer footer .redes-footer .icon-redes-footer{
+    font-size: 20px;
+    margin: 20px;
+    background: #efefef;
+    width: 50px;
+    height: 50px;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #a2a2a2;
+  }
+
+  .container-footer footer .redes-footer .icon-redes-footer .fa-facebook:hover{
+    background: #26a69a;
+  }

@@ -2,16 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta chatset="UTF-8">
-</head>
-<nav>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../img/LOGOFLT3.ico" rel="shortcut icon" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/373d923c27.js" crossorigin="anonymous"></script>
     
+</head>
+
+
+<nav class="" role="navigation">
+    <div class="nav-wrapper container">
+        <a class="brand-logo" href="app.component.html" id="logo-container">
+            <img alt="Loto Tres" height="50" src="../img/LOGOFLT3.ico" width="90"> </a>
+       
+
   <ul>
-    <li><a href="#">Iniciar sesion</a></li>
-    <li><a href="#">Registrarse</a></li>
-    <li><a href="#">Donativos</a></li>
-    <li><a href="#">Inicio</a></li>
+    <li><a href="../vistas/contacto.html">Contacto</a></li>
+    <li><a href="app.component.html">Iniciar sesion</a></li>
+    <li><a href="app.component.html">Registrarse</a></li>
+    <li><a href="../vistas/donativos.html">Donativos</a></li>
+    <li><a href="../vistas/inicio.html">Inicio</a></li>
     </ul>
+
+  <ul class="sidenav" id="nav-mobile" style="transform: translateX(-105%);">
+    <li><a href="../vistas/contacto.html">Contacto</a></li>
+    <li><a href="app.component.html">Iniciar sesion</a></li>
+    <li><a href="app.component.html">Registrarse</a></li>
+    <li><a href="../vistas/donativos.html">Donativos</a></li>
+    <li><a href="../vistas/inicio.html">Inicio</a></li>
+ </ul>
+
+    
+    </div>
 </nav>
 
 <body background="../img/taichi.jpg" >
@@ -23,7 +45,7 @@
             <div class="form">
                 <div class="item"> 
                   <i class="fa fa-user-circle" aria-hidden="true"></i>
-                    <input type="text" placeholder="Correo electronico" name="Correo"> 
+                    <input type="email" placeholder="Correo electronico" pattern="[a-z]*"  name="Correo"> 
                 </div>
 
                 <div class="item"> 
@@ -36,6 +58,24 @@
         </div>
     
     </form>
+
+<div class="container-footer"></div>
+    <footer>
+        <div class="logo-footer">
+            <img src="../img/lototres.jpg" alt="">
+        </div>
+
+        <div class="redesfooter">
+            <div class="a"><i class="fa-brands fa-facebook" icon-redes-footer></i></div>
+            <div class="a"><i class="fa-brands fa-twitter" icon-redes-footer></i></div>
+            <div class="a"><i class="fa-brands fa-youtube" icon-redes-footer></i></div>
+        </div>
+        
+        
+        <h4>Copyright Todos los</h4>
+    </footer>
+
+
 </body>
 
 </html>
