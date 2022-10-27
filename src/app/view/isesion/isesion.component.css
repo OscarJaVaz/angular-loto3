@@ -1,0 +1,93 @@
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/*INTERFAZ INICIO DE SESION/REGISTRO*/
+#login-box {
+    
+    border-radius: 11px;
+    border: 1px solid black;
+    width: 20%;
+    text-align: center;
+    margin: auto;
+    margin-top: 15%;
+    
+    background: #2B2B75;
+    padding: 25px 25px;
+    
+    
+}
+
+#login-box h1 {
+    color: white;
+    border-style: solid;
+    border-radius: 11px;
+    border: 1px solid black;
+    border-color: black;
+    background: #0D0725;
+    padding: auto;
+    width: auto;
+    
+}
+
+input:invalid{
+    animation: shake .3s;
+}
+
+@keyframes shake{
+    25% {transform: translateX(4px);}
+    50% {transform: translateX(-4px);}
+    75% {transform: translateX(4px);}
+}
+
+#login-box .form .item input {
+    width: auto; 
+    border: 10; 
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 18px; 
+    background: #D9D9D9; 
+    color: black; 
+    padding: auto; 
+    
+}
+
+#login-box .form .item i {
+    color: white;
+    font-size: 18px;
+}
+
+#login-box button {
+    border: 0; 
+    width: 150px; 
+    margin-top: 18px; 
+    font-size: 18px; 
+    color: white; 
+    border-radius: 25px; 
+    background: linear-gradient(45deg, rgb(59, 69, 206), #231b41) ;
+    animation: login-box 10s infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*FIN DE INTERFAZ INICIO DE SESION/REGISTRO*/
+
+
+
+
+
