@@ -1,5 +1,6 @@
 .cbp-mc-form {
     position: relative;
+    background-color: #7eb5d4;
     }
     
 
@@ -34,7 +35,7 @@
     line-height: 1.5;
     font-size: 1.4em;
     padding: 5px 10px;
-    color: rgb(158, 158, 158);
+    color: rgba(84, 103, 190, 0.842);
     display: block;
     width: 100%;
     background: transparent;
@@ -99,7 +100,20 @@
     font-size: 1.1em;
     border-radius: 2px;
     letter-spacing: 1px;
+
+    
+    cursor: pointer;
+    border: 0;
+    
+    font: 600 22px ;
+    box-shadow: 0 6px 0 #000000;
+    transition: .3s;
     }
+
+    .cbp-mc-form input.cbp-mc-submit:active{
+    transform: translateY(5px);
+    box-shadow: 0 3px 0 #000000;
+}
     
     .cbp-mc-form input.cbp-mc-submit:hover {
     background: #341292;

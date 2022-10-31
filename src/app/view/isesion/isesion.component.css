@@ -2,10 +2,15 @@ html{
     height: 100%;
 }
 
+
 body{
     display: flex;
     flex-direction: column;
     height: 100%;
+    background-image: url(https://www.lototres.org/img/yogaico.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*INTERFAZ INICIO DE SESION/REGISTRO*/
@@ -69,10 +74,23 @@ input:invalid{
     margin-top: 18px; 
     font-size: 18px; 
     color: white; 
-    border-radius: 25px; 
+    border-radius: 6px; 
     background: linear-gradient(45deg, rgb(59, 69, 206), #231b41) ;
     animation: login-box 10s infinite;
+
+    cursor: pointer;
+    border: 0;
+    
+    font: 600 22px 'Montserrat';
+    box-shadow: 0 6px 0 #000000;
+    transition: .3s;
 }
+
+#login-box button:active{
+    transform: translateY(5px);
+    box-shadow: 0 3px 0 #000000;
+}
+
 
 
 
