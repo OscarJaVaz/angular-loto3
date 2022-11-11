@@ -1,0 +1,105 @@
+
+ <!--Google Font-->
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet"><input type="checkbox" id="menu" />
+
+
+
+ <label for="menu" class="menu">
+	<span></span>
+	<span></span>
+	<span></span>
+</label>
+
+<nav class="nav">
+	<ul>
+        <li><a [routerLink]="['/perfil']">Perfil</a></li>
+		<li><a [routerLink]="['/actividad']">Actividades</a></li>
+        <li><a [routerLink]="['/home']">Cerrar sesi&oacute;n</a></li>
+		
+	</ul>
+</nav>
+
+
+<main>
+	<header>
+		<h1><i class="fa fa-picture-o" aria-hidden="true"></i></h1>
+	</header>
+	<section>
+		
+<div id='container'>
+	<div class='whysign'>
+    <h1>Registrarse a una actividad</h1>
+     
+  </div>
+  <div class='signup'>
+	
+    
+     <form>
+        <select>
+            <option selected class="selected">Seleccione la actividad ▼</option>
+            <option>Yoga</option>
+            <option>Defensa Personal Infantil</option>
+            <option>Tejido</option>
+            <option>Meditacion</option>
+            <option>Reciclado</option>
+            <option>Tanatologia</option>
+            <option>Pintura y repujado</option>
+            <option>Baile</option>
+            <option>Computacion</option>
+        </select>
+       
+    
+       <input type='email' placeholder='Correo electronico:'  />
+       
+        </form>
+
+  </div>
+  
+  <div class="lado">
+	<form >
+	
+	
+	<input type='password' placeholder='Contraseña:'  />
+	<input type='password' placeholder='Confirma tu contraseña:'  />
+	<input type='submit' placeholder='SUBMIT' [routerLink]="['/actividad']" />
+</form>
+  </div>
+  
+</div>
+
+	</section>
+	<div class="img">
+		<h1><i class="fa fa-picture-o" aria-hidden="true"></i></h1>
+	</div>
+	
+	<footer>
+		<div class="logo">
+			<i class="fa fa-picture-o" aria-hidden="true"></i>
+		</div>
+		<ul>
+			<li><a [routerLink]="['/home']">Inicio</a></li>
+			<li><a [routerLink]="['/actividades']">Actividades</a></li>
+			<li><a [routerLink]="['/donaciones']">Donativos</a></li>
+			<li><a [routerLink]="['/contacto']">Contacto</a></li>
+			<li><a [routerLink]="['/campaña']">Campaña</a></li>
+		</ul>
+		<div class="secondary-links">
+			
+
+			
+
+			<a href="https://www.facebook.com/fundacionlototresac" target="_blank"><img loading="lazy" alt="Sígueme en Facebook" height="35" width="35" src=" https://1.bp.blogspot.com/-Pop-U7OywXs/YPhkfrImyiI/AAAAAAAAA1Y/UBnVfTK9j2U-bIUqwZYMNSQPvz_l06mbwCPcBGAYYCw/s0/facebook-icono.png" title="Sígueme en Facebook"/></a>
+			
+			<a href="https://www.youtube.com/channel/UC1Eg93TeFfm2BLNo4gwNGQw" target="_blank"><img loading="lazy" alt="Sígueme en YouTube" height="35" width="35" src=" https://1.bp.blogspot.com/-0Ao8V_ZtT5Q/YPhkfO0JqkI/AAAAAAAAA1U/Sz5GlaSW78AsY3nZpcqeIoPA_HQUSCVLgCPcBGAYYCw/s0/Youtube-icono.png" title=" Sígueme en YouTube "/></a>
+			
+			<a href="https://www.instagram.com/fundacionlototresac/" target="_blank"><img loading="lazy" alt="Sígueme en Instagram" height="35" width="35" src="https://1.bp.blogspot.com/-VFfOISywV0c/YPhkeRXuRQI/AAAAAAAAA1M/L75S9Usg5AovunH2Y-VzqJbaaY1LuK3eACPcBGAYYCw/s0/Instagram-icono.png" title="Sígueme en Instagram"/></a>
+
+			<a href="https://twitter.com/LotoTres" target="_blank"><img loading="lazy" alt=" Sígueme en Twitter" height="35" width="35" src=" https://1.bp.blogspot.com/-2JwTJZxg1AU/YPhkfB0DdjI/AAAAAAAAA1c/tDKdU6tS0A0lt4YegGUVd7k-9hguYz82ACPcBGAYYCw/s0/Twitter-icono.png" title="Sígueme en Twitter"/></a>
+
+		
+	</div>
+	</footer>
+</main>
+
+
