@@ -1,183 +1,95 @@
-/*PANTALLA INICIO*/
-
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
-
-
-body{
-    height: 150vh;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Source Sans Pro', sans-serif;
+section {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
-
-
-.container-cover{
-    width: 100%;
-    height: 300px;
-    position: relative;
-    margin-top: 80px;
-    background-color: rgb(175, 164, 235);
-    background-repeat: no-repeat;
-    background-image: url(https://cdn2.hubspot.net/hubfs/4759614/navidad_Blog_Post%20%281%29.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
-
-.container-cover::before{
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: rgba(127, 255, 212, 0.274);
-    position: absolute;
-    top: 0;
-    left: 0;
+.column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
 }
-
-
-
-.container-info-cover{
-    max-width: 800px;
-    height: 300px;
-    margin: auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #3b4094 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
 }
-
-.container-info-cover h1{
-    font-size: 60px;
-    font-weight: 500;
-    color: rgb(0, 0, 0);
-    margin-bottom: 20px;
-    transition: .5s;
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
 }
-
-
-
-.container-info-cover p{
-    color: rgb(41, 39, 39);
-    font-size: 20px;
-    font-weight: 300;
-    border-bottom-style: solid;
+p {
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
 }
-
-/*CONTENIDO*/
-
-.container-content{
-    
-    height: 600px;
-    width: 100%;
-    
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    margin-top: none;
-    background-color: rgb(62, 92, 177);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(https://kinsta.com/es/wp-content/uploads/sites/8/2018/07/paypal-bot%C3%B3n-donativo-wordpress.png);
+.icon-wrapper {
+  background-color: #3b4094;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
 }
-
-
-
-.content-info{
-    max-width: 800px;
-    height: 300px;
-    margin: auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    
+.card:hover {
+  background-position: 0 100%;
 }
-
-
-
-.marco {
-    width:1000px;
-    margin:10px auto 100px auto; /* Centrado horizontal */
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #3b4094;
 }
-
-
-
-.cuerpo {
-    padding:10px 0 10px 0;
-    overflow-x:hidden;
-    overflow-y:auto; 
-    height:100%; 
-    position: relative;
+.card:hover h3 {
+  color: #ffffff;
 }
-
-.columna_derecha {
-    float:right; /* Valores */
-    width:270px;
-    text-align: center;
-    justify-content: center;
-    padding:10px;
+.card:hover p {
+  color: #f0f0f0;
 }
-
-.columna_derecha h2{
-    color: black;
-    font-size: 50px;
+@media screen and (min-width: 768px) {
+  section {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
 }
-
-.columna_derecha ol{
-    font-size: 21px;
-    color: black;
-}
-
-.columna_izquierda {
-    float:left; /* Mision*/
-    width:270px;
-    text-align: center;
-    justify-content: center;
-    padding:10px;
-}
-
-.columna_izquierda h2{
-    color: black;
-    font-size: 50px;
-}
-
-.columna_izquierda p{
-    color: black;
-    font-size: 30px;
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em 3em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
 }
 
 
 
 
-
-
-.cuerpo::before{
-    content: '';
-    width: 100%;
-    height: 6px;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    background: rgb(29, 30, 73);
-}
 
 

@@ -1,47 +1,96 @@
-<app-menu></app-menu>
 
-<head>
-    <script src="https://kit.fontawesome.com/abc896a6c9.js" crossorigin="anonymous"></script>
-</head>
-
-<header>
-  <div class="container-cover">
-      <div class="container-info-cover">
-          <h1>Haz un donativo en apoyo a Loto Tres</h1>
-          <p>En fundación LotoTres contamos con distintas formas en las que puedes APORTAR,
-            realiza tus donativos en especie, monetarios o siendo voluntario. Te mostramos las formas de DONAR.</p>
-      </div>
-  </div>
-
-  <div class="container-content">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donativos</title>
     
-      <div class="marco">
-          
-          <div class="cuerpo">
-              <div class="columna_derecha">
-                  <h2>Donaciones en PayPal</h2>
-                  
-                  
-
-              </div>
-              <div class="columna_izquierda">
-                  <h2>Banco Azteca</h2>
-                  <p>Número de cuenta: 97090127383517
-                    Clabe: 127180001273835176
-                  </div>
-              
-          </div>
-         
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <section>
+      <div class="row">
+        <h2 class="section-heading">Donativos</h2>
       </div>
+      <div class="row">
+        <div class="column">
+          <div class="card" [routerLink]="['/home']">
+            <div class="icon-wrapper">
+              <i class="fas fa-hammer"></i>
+            </div >
+            <h3 [routerLink]="['/home']">Regresar al inicio</h3>
+            
+          </div>
+        </div>
 
-      
-      
+		<div class="column">
+			<div class="card">
+			  <div class="icon-wrapper">
+				<i class="fas fa-hammer"></i>
+			  </div>
+			  <h3>¿Como donar?</h3>
+			  <p>
+				  En fundación Loto Tres contamos con distintas formas en las que puedes aportar, realiza tus donativos en especie, monetarios o siendo voluntario. A continuación, te mostramos las formas de donar.   </p>
+			</div>
+		  </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-brush"></i>
+            </div>
+            <h3>Banco Azteca</h3>
+            <p>
+				Número de cuenta: 97090127383517
+
+				Clabe: 127180001273835176</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <h3>Donaciones en Paypal</h3>
+            <a class="login-link" href="#">Desde $100</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-truck-pickup"></i>
+            </div>
+            <h3>Donaciones en PayPal</h3>
+            <a class="login-link" href="#">Desde $200</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-broom"></i>
+            </div>
+            <h3>Donaciones en PayPal</h3>
+            <a class="login-link" href="#">O puedes elegir el monto</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-plug"></i>
+            </div>
+            <h3>Tu donación es importante</h3>
+            <p>
+              Al realizar tu donacion estas contribuyendo ayudando
+			  a nuestras campañas y ser una mejor fundacion para la comunidad❤️​
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-  </div>
-
-
-  
-</header>
-
-<app-footer></app-footer>
+	
+  </body>

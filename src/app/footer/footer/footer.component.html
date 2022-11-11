@@ -1,23 +1,48 @@
- <head>
-    <script src="https://kit.fontawesome.com/abc896a6c9.js" crossorigin="anonymous"></script>
-
- </head>
- 
-
-<div class="container-footer">
-    <hr>
-        <h4>Siguenos en nuestras redes</h4>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Footer</title>
+    
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
     <footer>
-        <div class="logo-footer">
-            <img src="" alt="">
+      <div class="row primary">
+        <div class="column about">
+          <h3>Fundacion Loto Tres</h3>
+          <p>
+            Somos una organización sin fines de lucro cuyo objetivo más importante es expandir nuestra causa en favor de los que menos tienen. Buscando apoyar, capacitar y proporcionar recursos de alta calidad a nuestra comunidad en un entorno seguro.  </p>
         </div>
-        <div class="redes-footer">
-            <a href="#"><i class="fa-brands fa-facebook icon-redes-footer"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter icon-redes-footer"></i></a>
-            <a href="https://www.youtube.com/channel/UC1Eg93TeFfm2BLNo4gwNGQw"><i class="fa-brands fa-youtube icon-redes-footer"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram icon-redes-footer"></i></a>
-        </div>
+        <div class="column links">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a [routerLink]="['/home']">Inicio</a></li>
+			<li><a [routerLink]="['/actividades']">Actividades</a></li>
+			<li><a [routerLink]="['/donaciones']">Donativos</a></li>
+			<li><a [routerLink]="['/contacto']">Contacto</a></li>
 
-        <h4>Todos los Derechos Reservados 2022 </h4>
+          </ul>
+        </div>
+        <div class="column subscribe">
+          <h3>Suscribete para mas informacion</h3>
+          <div>
+            <input type="email" placeholder="Correo electronico" />
+            <button>Subscribete</button>
+          </div>
+          
+        </div>
+      </div>
+
+      
+      <div class="row copyright">
+        <p>Copyright &copy; 2022 | Todos Los Derechos Reservados</p>
+      </div>
     </footer>
-</div>
+  </body>
+</html>

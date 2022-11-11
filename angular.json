@@ -26,6 +26,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/arrow-down.png",
               "src/favicon.ico",
               "src/assets"
             ],
@@ -106,4 +107,10 @@
     }
   },
   "defaultProject": "angular-loto3"
+
+
+  
 }
+
+
+

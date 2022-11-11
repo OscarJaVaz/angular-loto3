@@ -1,60 +1,95 @@
-<app-menu></app-menu>
 
-<br>
-<br>
-<br>
+ <!--Google Font-->
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet"><input type="checkbox" id="menu" />
 
-<form class="cbp-mc-form">
-    <div class="cbp-mc-column">
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombres" name="nombre" placeholder="Ingresa tu nombre">
-    <label for="apellido">Apellido Paterno</label>
-    <input type="text" id="apellidopat" name="nombre" placeholder="Ingresa tu apellido">
-   
-    <label for="apellido">Apellido Materno</label>
-    <input type="text" id="apellidomat" name="nombre" placeholder="Ingresa tu apellido">
-   
-    <label for="edad">Edad</label>
-    <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad">
 
-    <label for="date">dd/mm/aaaa</label>
-    <input type="date" id="fecha_nac" name="fecha_nac" placeholder="Fecha de nacimiento">
 
+ <label for="menu" class="menu">
+	<span></span>
+	<span></span>
+	<span></span>
+</label>
+
+<nav class="nav">
+	<ul>
+		<li><a [routerLink]="['/home']">Inicio</a></li>
+		<li><a [routerLink]="['/isesion']">Iniciar sesi&oacute;n</a></li>
+		
+		
+	</ul>
+</nav>
+
+
+<main>
+	<header>
+		<h1><i class="fa fa-picture-o" aria-hidden="true"></i></h1>
+	</header>
+	<section>
+		
+<div id='container'>
+	<div class='whysign'>
+    <h1>Registrarse</h1>
+     
+  </div>
+  <div class='signup'>
+	
+     <form>
+       <input type='text' placeholder='Nombre(s):'  />
+       <input type='text' placeholder='Apellido paterno:'  />
+       <input type='text' placeholder='Apellido materno:'  />
+       <input type='number' placeholder='Edad:'  />
     
-   
-    </div>
-    <div class="cbp-mc-column">
-    <label for="email">Correo electronico</label>
-    <input type="text" id="correo" name="correo" placeholder="ejemplo@ejemplo.com">
+       <input type='email' placeholder='Correo electronico:'  />
+       <input type='number' placeholder='Numero de celular:'  />
+        </form>
 
-    <label for="contrasena">Contrase&ntilde;a</label>
-    <input type="password" id="contra" name="contra" placeholder="Ingresa tu contrase&ntilde;a">
+  </div>
+  
+  <div class="lado">
+	<form >
+	<input type='number' placeholder='Numero particular:'  />
+	<input type='date' placeholder='Fecha de nacimiento:'  />
+	<input type='password' placeholder='Contraseña:'  />
+	<input type='password' placeholder='Confirma tu contraseña:'  />
+	<input type='submit' placeholder='SUBMIT' />
+</form>
+  </div>
+  
+</div>
 
-    <label for="contrasena">Contrase&ntilde;a</label>
-    <input type="password" id="contra" name="contra" placeholder="Confirma tu contrase&ntilde;a">
+	</section>
+	<div class="img">
+		<h1><i class="fa fa-picture-o" aria-hidden="true"></i></h1>
+	</div>
+	
+	<footer>
+		<div class="logo">
+			<i class="fa fa-picture-o" aria-hidden="true"></i>
+		</div>
+		<ul>
+			<li><a [routerLink]="['/home']">Inicio</a></li>
+			<li><a [routerLink]="['/actividades']">Actividades</a></li>
+			<li><a [routerLink]="['/donaciones']">Donativos</a></li>
+			<li><a [routerLink]="['/contacto']">Contacto</a></li>
+			<li><a [routerLink]="['/campaña']">Campaña</a></li>
+		</ul>
+		<div class="secondary-links">
+			
 
-    <label for="phone">Numero de celular</label>
-    <input type="number" id="phone" name="phone" placeholder="+55 5555 5555">
+			
 
-    
-    
-    
-    </div>
-    <div class="cbp-mc-column">
-    <label for="direccion">Direccion</label>
-    <input type="text" id="direccion" name="direccion" placeholder="Ingresa tu direccion">
+			<a href="https://www.facebook.com/fundacionlototresac" target="_blank"><img loading="lazy" alt="Sígueme en Facebook" height="35" width="35" src=" https://1.bp.blogspot.com/-Pop-U7OywXs/YPhkfrImyiI/AAAAAAAAA1Y/UBnVfTK9j2U-bIUqwZYMNSQPvz_l06mbwCPcBGAYYCw/s0/facebook-icono.png" title="Sígueme en Facebook"/></a>
+			
+			<a href="https://www.youtube.com/channel/UC1Eg93TeFfm2BLNo4gwNGQw" target="_blank"><img loading="lazy" alt="Sígueme en YouTube" height="35" width="35" src=" https://1.bp.blogspot.com/-0Ao8V_ZtT5Q/YPhkfO0JqkI/AAAAAAAAA1U/Sz5GlaSW78AsY3nZpcqeIoPA_HQUSCVLgCPcBGAYYCw/s0/Youtube-icono.png" title=" Sígueme en YouTube "/></a>
+			
+			<a href="https://www.instagram.com/fundacionlototresac/" target="_blank"><img loading="lazy" alt="Sígueme en Instagram" height="35" width="35" src="https://1.bp.blogspot.com/-VFfOISywV0c/YPhkeRXuRQI/AAAAAAAAA1M/L75S9Usg5AovunH2Y-VzqJbaaY1LuK3eACPcBGAYYCw/s0/Instagram-icono.png" title="Sígueme en Instagram"/></a>
 
-    <label for="phone">Numero particular</label>
-    <input type="number" id="phone" name="phone" placeholder="+596 55 5555">
+			<a href="https://twitter.com/LotoTres" target="_blank"><img loading="lazy" alt=" Sígueme en Twitter" height="35" width="35" src=" https://1.bp.blogspot.com/-2JwTJZxg1AU/YPhkfB0DdjI/AAAAAAAAA1c/tDKdU6tS0A0lt4YegGUVd7k-9hguYz82ACPcBGAYYCw/s0/Twitter-icono.png" title="Sígueme en Twitter"/></a>
 
-
-    <div class="cbp-mc-submit-wrap"><input class="cbp-mc-submit" type="submit" 
-        value="Registrarse" /></div>
-    </div>
-
-    
-    </form>
-
-<app-footer></app-footer>
+		
+	</div>
+	</footer>
+</main>
 
 

@@ -1,109 +1,467 @@
-html{
-    height: 100%;
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-smooth: auto;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #444;
+  overflow-x: hidden;
 }
 
 
-body{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background-image: url(https://www.lototres.org/img/yogaico.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+.menu span:nth-of-type(1) {
+  transform: translateY(-5px);
+}
+.menu span:nth-of-type(3) {
+  transform: translateY(5px);
 }
 
-/*INTERFAZ INICIO DE SESION/REGISTRO*/
-#login-box {
-    
-    border-radius: 11px;
-    border: 1px solid black;
-    width: 20%;
+#menu {
+  display: none;
+}
+#menu:checked ~ .menu {
+  background-color: transparent;
+  transform: rotate(360deg);
+  transition: transform 250ms ease;
+}
+#menu:checked ~ .menu span {
+  background-color: white;
+  transition: transform 250ms ease;
+}
+#menu:checked ~ .menu span:nth-of-type(1) {
+  transform: translateY(1px) rotate(45deg);
+}
+#menu:checked ~ .menu span:nth-of-type(2) {
+  display: none;
+}
+#menu:checked ~ .menu span:nth-of-type(3) {
+  transform: translateY(-1px) rotate(-45deg);
+}
+#menu:checked ~ .nav {
+  left: 0px;
+  transition: left 500ms ease;
+}
+#menu:checked ~ main {
+  transform: translateX(250px);
+  transition: transform 500ms ease;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: -210px;
+  width: 300px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+ 
+  transition: left 500ms ease;
+  z-index: 0;
+}
+.nav ul {
+  position: relative;
+  list-style-type: none;
+  margin: 100px 0;
+  padding: 0;
+}
+.nav ul li {
+  position: relative;
+  display: block;
+  border-bottom: 5px solid white;
+}
+.nav ul li a {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 15px 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav ul li a:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: width 250ms ease;
+  z-index: -1;
+}
+.nav ul li a:hover {
+  color: #444;
+}
+.nav ul li a:hover:before {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: width 250ms ease;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+main {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: translateX(0px);
+  transition: transform 500ms ease;
+  z-index: 0;
+}
+main header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  background-image: url(https://yt3.ggpht.com/ytc/AMLnZu8SNcWLRs3XeJvtzU68YARG5rUpAxkNXycv3zx6lg=s900-c-k-c0x00ffffff-no-rj);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+main header h1 {
+  color: #ccc;
+  z-index: 3;
+}
+main section {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 50px 0;
+  background-color: white;
+  z-index: 100;
+}
+main section p {
+  margin-bottom: 30px;
+}
+main .img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 181px;
+  background-color: rgb(255, 255, 255);
+  background-image: url(https://fondify-media.s3.amazonaws.com/organizations/covers/2021-07-12/picture_PL6RTId.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+main .img h1 {
+  color: rgba(255, 255, 255, 0.2);
+}
+main footer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 5px 5px 5px;
+  background-color: #3b4094;
+}
+main footer::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+main footer .logo {
+  font-size: 28px;
+  color: whitesmoke;
+  line-height: 0;
+  margin-bottom: 8px;
+  margin-right: 4px;
+}
+@media screen and (min-width: 1024px) {
+  main footer .logo {
+    float: left;
+    margin-bottom: 0;
+  }
+}
+main footer ul {
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+main footer ul::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+@media screen and (min-width: 1024px) {
+  main footer ul {
+    float: left;
+    line-height: 1.8;
+    margin-bottom: 0;
+    margin-left: 16px;
+  }
+  main footer ul::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+main footer ul li {
+  list-style: none;
+  padding-right: 16px;
+}
+@media screen and (min-width: 1024px) {
+  main footer ul li {
+    display: inline;
+    text-align: left;
+  }
+}
+main footer ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+main footer ul li a:focus, main footer ul li a:hover {
+  color: white;
+}
+@media screen and (min-width: 1024px) {
+  main footer .secondary-links {
+    float: right;
+  }
+}
+main footer .secondary-links li a {
+  font-size: 12px;
+  font-weight: 100 !important;
+}
+main footer .secondary-links .social {
+  margin: 1em 0 0 0;
+}
+@media screen and (min-width: 1024px) {
+  main footer .secondary-links .social {
+    float: right;
+    margin-top: 0;
+  }
+}
+main footer .secondary-links .social li {
+  float: left;
+  font-size: 1em;
+  line-height: 0;
+  margin: 0;
+  padding-right: 0.7em;
+}
+main footer .secondary-links .social li:last-child {
+  padding-right: 0;
+}
+main footer .secondary-links .social li > a {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  color: #444;
+  text-align: center;
+  line-height: 30px;
+}
+main footer .secondary-links .social li > a:hover {
+  background-color: white;
+}
+
+.secondary-links img{
+   
+  transition:all 0.5s ease-out; border-radius:50px;
+  }
+  .secondary-links img:hover{
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  transform:translate(0px, -10px); 
+  }
+
+.control-group {
+  margin-bottom: 10px;
+  }
+
+  input {
     text-align: center;
-    margin: auto;
-    margin-top: 15%;
+    background-color: #ECF0F1;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 10px 0;
+    width: 250px;
+    transition: border .5s;
+    }
     
-    background: #2B2B75;
-    padding: 25px 25px;
+    input:focus {
+    border: 2px solid #3498DB;
+    box-shadow: none;
+    }
     
-    
+
+
+.btn {
+    border: 2px solid transparent;
+    background: #292c6d;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+
+    align-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px #ff0030;
+  transition: .3s;
+  }
+
+  .btn:active{
+      transform: translateY(5px);
+      box-shadow: 0 3px 0 #ff0030;
+      color: white;
+      background-color: #ca2828;
+    }
+
+    .login-link {
+      font-size: 15px;
+      color: rgb(0, 0, 0);
+      display: block;
+        margin-top: 12px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+section {
+  height: 100vh;
+  width: 130%;
+  display: grid;
+  place-items: center;
+  
 }
 
-#login-box h1 {
-    color: white;
-    border-style: solid;
-    border-radius: 11px;
-    border: 1px solid black;
-    border-color: black;
-    background: #0D0725;
-    padding: auto;
-    width: auto;
-    
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #3b4094 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+p {
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+.icon-wrapper {
+  background-color: #3b4094;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.card:hover {
+  background-position: 0 100%;
+}
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #3b4094;
+}
+.card:hover h3 {
+  color: #ffffff;
+}
+.card:hover p {
+  color: #f0f0f0;
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em 3em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
 }
 
-input:invalid{
-    animation: shake .3s;
-}
-
-@keyframes shake{
-    25% {transform: translateX(4px);}
-    50% {transform: translateX(-4px);}
-    75% {transform: translateX(4px);}
-}
-
-#login-box .form .item input {
-    width: auto; 
-    border: 10; 
-    border-radius: 10px;
-    margin-top: 10px;
-    font-size: 18px; 
-    background: #D9D9D9; 
-    color: black; 
-    padding: auto; 
-    
-}
-
-#login-box .form .item i {
-    color: white;
-    font-size: 18px;
-}
-
-#login-box button {
-    border: 0; 
-    width: 150px; 
-    margin-top: 18px; 
-    font-size: 18px; 
-    color: white; 
-    border-radius: 6px; 
-    background: linear-gradient(45deg, rgb(59, 69, 206), #231b41) ;
-    animation: login-box 10s infinite;
-
-    cursor: pointer;
-    border: 0;
-    
-    font: 600 22px 'Montserrat';
-    box-shadow: 0 6px 0 #000000;
-    transition: .3s;
-}
-
-#login-box button:active{
-    transform: translateY(5px);
-    box-shadow: 0 3px 0 #000000;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*FIN DE INTERFAZ INICIO DE SESION/REGISTRO*/
 
 
 

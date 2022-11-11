@@ -1,38 +1,90 @@
+<input type="checkbox" id="menu" />
+<label for="menu" class="menu">
+	<span></span>
+	<span></span>
+	<span></span>
+</label>
 
-<app-menu></app-menu>
 
-<head>
-  <script src="https://kit.fontawesome.com/abc896a6c9.js" crossorigin="anonymous"></script>
-</head>
 
 <body>
+    <section>
+      <div class="row">
+        <h2 class="section-heading">Bienvenidoㅤ⠀ㅤㅤ⠀ㅤㅤ⠀ㅤㅤ⠀ㅤ</h2>
+      </div>
+	 
+      <div class="row">
+        <div class="column">
+          <div class="card" >
+            <div class="icon-wrapper">
+              <i class="fas fa-hammer"></i>
+            </div >
+            <h3>Iniciar sesi&oacute;n</h3>
+            <div class="control-group">
+				<input type="email" class="login-field" value="" placeholder="Correo electronico" id="login-name">
+				<label class="login-field-icon fui-user" for="login-name"></label>
+				</div>
 
-  
+			<div class="control-group">
+				<input type="password" class="login-field" value="" placeholder="Contraseña" id="login-pass">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>	
 
-    <form action="#" method="POST">
- 
-        <div id="login-box">
-        <h1>Iniciar sesión</h1>
+				<a class="btn btn-primary btn-large btn-block" [routerLink]="['/perfil']">Entrar</a>
+				
+				<a class="login-link" [routerLink]="['/recuperar']">Olvidaste tu contraseña? Ingresa aqui</a>
+			
 
-        <div class="form">
-            <div class="item">
-                <i class="fa fa-user-circle" aria-hidden="true"></i>
-                    <input type="email" placeholder="Correo electronico" pattern="[a-z]*"  name="Correo">
+          </div>
         </div>
 
-      <div class="item">
-        <i class="fa fa-key" aria-hidden="true"></i>
-        <input type="password" placeholder="Contraseña" name="password">
+		<div class="column" [routerLink]="['/registro']">
+			<div class="card">
+			  <div class="icon-wrapper">
+				<i class="fas fa-hammer"></i>
+			  </div>
+			  <h3>¿Aún no tienes una cuenta?</h3>
+			  <p>
+				ㅤ⠀ㅤㅤ⠀¡Registrarte ahora! ㅤ⠀ㅤㅤ⠀ㅤㅤ⠀ㅤㅤ⠀ㅤㅤ⠀ㅤㅤ⠀ㅤㅤ⠀ㅤㅤ⠀ㅤㅤ⠀ㅤㅤ⠀ㅤㅤ⠀ㅤㅤ⠀ㅤ  </p>
+			</div>
+		  </div>
+
+        
       </div>
-    </div>
-
-    <button type="submit">Entrar</button> <! - Botón de inicio de sesión ->
-  </div>
-
-</form>
-
-<app-footer></app-footer>
+    </section>
 
 
-</body>
+	
+  </body>
+<main>
+	  
 
+	<footer>
+		<div class="logo">
+			<i class="fa fa-picture-o" aria-hidden="true"></i>
+		</div>
+		<ul>
+			<li><a [routerLink]="['/home']">Inicio</a></li>
+			<li><a [routerLink]="['/actividades']">Actividades</a></li>
+			<li><a [routerLink]="['/donaciones']">Donativos</a></li>
+			<li><a [routerLink]="['/contacto']">Contacto</a></li>
+			<li><a [routerLink]="['/campaña']">Campaña</a></li>
+		</ul>
+
+		<div class="secondary-links">
+			
+
+			
+
+			<a href="https://www.facebook.com/fundacionlototresac" target="_blank"><img loading="lazy" alt="Sígueme en Facebook" height="35" width="35" src=" https://1.bp.blogspot.com/-Pop-U7OywXs/YPhkfrImyiI/AAAAAAAAA1Y/UBnVfTK9j2U-bIUqwZYMNSQPvz_l06mbwCPcBGAYYCw/s0/facebook-icono.png" title="Sígueme en Facebook"/></a>
+			
+			<a href="https://www.youtube.com/channel/UC1Eg93TeFfm2BLNo4gwNGQw" target="_blank"><img loading="lazy" alt="Sígueme en YouTube" height="35" width="35" src=" https://1.bp.blogspot.com/-0Ao8V_ZtT5Q/YPhkfO0JqkI/AAAAAAAAA1U/Sz5GlaSW78AsY3nZpcqeIoPA_HQUSCVLgCPcBGAYYCw/s0/Youtube-icono.png" title=" Sígueme en YouTube "/></a>
+			
+			<a href="https://www.instagram.com/fundacionlototresac/" target="_blank"><img loading="lazy" alt="Sígueme en Instagram" height="35" width="35" src="https://1.bp.blogspot.com/-VFfOISywV0c/YPhkeRXuRQI/AAAAAAAAA1M/L75S9Usg5AovunH2Y-VzqJbaaY1LuK3eACPcBGAYYCw/s0/Instagram-icono.png" title="Sígueme en Instagram"/></a>
+
+			<a href="https://twitter.com/LotoTres" target="_blank"><img loading="lazy" alt=" Sígueme en Twitter" height="35" width="35" src=" https://1.bp.blogspot.com/-2JwTJZxg1AU/YPhkfB0DdjI/AAAAAAAAA1c/tDKdU6tS0A0lt4YegGUVd7k-9hguYz82ACPcBGAYYCw/s0/Twitter-icono.png" title="Sígueme en Twitter"/></a>
+
+		
+	</div>
+	</footer>
+</main>
