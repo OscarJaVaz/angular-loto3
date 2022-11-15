@@ -1,0 +1,360 @@
+
+  .menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 250ms ease;
+    cursor: pointer;
+    z-index: 200;
+  }
+  .menu span {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #2b2a75;
+    float: left;
+    transform-origin: center center;
+    transition: transform 250ms ease;
+    z-index: 200;
+  }
+  .menu span:nth-of-type(1) {
+    transform: translateY(-5px);
+  }
+  .menu span:nth-of-type(3) {
+    transform: translateY(5px);
+  }
+  
+  #menu {
+    display: none;
+  }
+  #menu:checked ~ .menu {
+    background-color: transparent;
+    transform: rotate(360deg);
+    transition: transform 250ms ease;
+  }
+  #menu:checked ~ .menu span {
+    background-color: white;
+    transition: transform 250ms ease;
+  }
+  #menu:checked ~ .menu span:nth-of-type(1) {
+    transform: translateY(1px) rotate(45deg);
+  }
+  #menu:checked ~ .menu span:nth-of-type(2) {
+    display: none;
+  }
+  #menu:checked ~ .menu span:nth-of-type(3) {
+    transform: translateY(-1px) rotate(-45deg);
+  }
+  #menu:checked ~ .nav {
+    left: 0px;
+    transition: left 500ms ease;
+  }
+  #menu:checked ~ main {
+    transform: translateX(250px);
+    transition: transform 500ms ease;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -210px;
+    width: 200px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #2b2a75;
+    transition: left 500ms ease;
+    z-index: 0;
+  }
+  .nav ul {
+    position: relative;
+    list-style-type: none;
+    margin: 100px 0;
+    padding: 0;
+  }
+  .nav ul li {
+    position: relative;
+    display: block;
+    border-bottom: 5px solid white;
+  }
+  .nav ul li a {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 15px 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .nav ul li a:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: width 250ms ease;
+    z-index: -1;
+  }
+  .nav ul li a:hover {
+    color: #444;
+  }
+  .nav ul li a:hover:before {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: width 250ms ease;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    color: #00171F;
+    font-family: Lato, sans-serif;
+    background-color: #f6f6f6;
+  }
+  
+  a {
+    color: #3b4094;
+    text-decoration: none;
+  }
+  
+  p {
+    color: #444;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  h1 {
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 42px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ddd;
+    cursor: default;
+  }
+
+  .desc{
+    justify-content: center;
+    font-size: 12px;
+    font-style: italic;
+
+  }
+
+  p{
+    font-size: 20px;
+  }
+  
+  h2 {
+    color: #2b2a75;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    margin-top: 20px;
+    width: 100%;
+    color: #3b4094;
+    font-size: 14px;
+    border-spacing: 0;
+  }
+  table th,
+  table td {
+    padding: 10px;
+  }
+  table thead th {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  table tbody tr:nth-of-type(odd) {
+    background-color: #f6f6f6;
+  }
+  table tbody tr:hover {
+    background-color: #ecf7ff;
+  }
+  
+  .btn {
+    padding: 10px;
+    margin: 0 5px;
+    border: 0;
+    color: white;
+    font-size: 15px;
+    background-color: #3b4094;
+  }
+  .btn:first-child {
+    margin-left: 0;
+  }
+  
+  .btn-delete {
+    background-color: #d90000;
+  }
+  
+  /**
+    Container
+  */
+  .app-container {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100vh;
+  }
+  
+  /**
+    Navigation
+  */
+  .nav {
+    flex: 1;
+    max-width: 180px;
+    background-color: #3b4094;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .nav__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: #ccc;
+    font-size: 24px;
+    letter-spacing: 1px;
+    background-color: #00171F;
+    cursor: default;
+    text-shadow: 1px 1px 3px black;
+    cursor: pointer;
+  }
+  
+  .nav__list {
+    margin: 40px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .nav__list-item {
+    position: relative;
+  }
+  
+  .nav__list-item--active {
+    padding: 10px 0 10px 15px;
+  }
+  .nav__list-item--active .nav__item-link {
+    padding: 15px 15px;
+    color: #1a1a1a;
+    font-weight: 700;
+    background-color: #FFFBFC;
+  }
+  
+  .nav__item-link {
+    display: block;
+    padding: 10px 30px;
+    color: #eee;
+  }
+  
+  /**
+    App View
+  */
+  .app-view {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  
+  /**
+    Utility Bar
+  */
+  .utility-bar {
+    height: 50px;
+    font-size: 13px;
+    font-weight: 300;
+    background-color: #3b4094;
+  }
+  
+  .utility-bar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%;
+  }
+  
+  .utility-bar__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .utility-bar__item-link {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 50px;
+  }
+  .utility-bar__item-link svg,
+  .utility-bar__item-link svg path {
+    fill: #3b4094 !important;
+    transition: fill 200ms ease-out;
+  }
+  .utility-bar__item-link:hover svg,
+  .utility-bar__item-link:hover svg path {
+    fill: #3b4094 !important;
+  }
+  
+  .utility-bar__indicator {
+    position: relative;
+    left: -7px;
+    top: 9px;
+    width: 14px;
+    height: 14px;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    background-color: #d90000;
+    border-radius: 100%;
+  }
+  
+  .utility-bar__account {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  .utility-bar__account:hover .utility-bar__account-name {
+    color: #eee;
+  }
+  
+
+  
+  .utility-bar__account-name {
+    color: #3b4094;
+    transition: color 200ms ease-out;
+  }
+  
+  /**
+    Content
+  */
+  .content {
+    flex: 1;
+    padding: 30px;
+    background-color: #FFFBFC;
+    -webkit-font-smoothing: antialiased;
+  }

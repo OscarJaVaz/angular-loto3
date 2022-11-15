@@ -1,0 +1,84 @@
+<body>
+    
+
+<input type="checkbox" id="menu" />
+<label for="menu" class="menu">
+	<span></span>
+	<span></span>
+	<span></span>
+</label>
+
+<nav class="nav">
+	<ul>
+		<li><a [routerLink]="['/admin']">Panel de control</a></li>
+		<li><a [routerLink]="['/gactividad']">Actividades</a></li>
+        <li><a [routerLink]="['/geventos']">Eventos</a></li>
+		<li><a [routerLink]="['/galumnos']">Alumnos</a></li>
+		<li><a [routerLink]="['/home']">Cerrar sesion</a></li>
+	</ul>
+</nav>
+  
+
+
+<header class='main-nav'>
+    <h1 class="bienvenida">Bienvenido, administrador</h1>
+  </header>
+  <br>
+  <br>
+  <div class='content'>
+    <h1 class='title'>Panel de control</h1>
+    <br>
+    <section class="user-profile">
+        <div class="user-profile-body">
+          
+    
+            
+            <div class="user-profile-footer">
+              <ul class="data-list">
+                <img src="https://cdn-icons-png.flaticon.com/512/17/17115.png"> 
+               <br>
+                <a type="button" class="btn btn-outline-dark" class="btn btn-primary" [routerLink]="['/galumnos']" role="button">Gestionar alumnos</a>
+                
+              </ul>
+              
+            </div>
+            <br>
+
+            <div class="user-profile-footer1">
+                <ul class="data-list">
+                  <img src="https://media.istockphoto.com/id/1314058264/es/vector/portapapeles-icono-cheklist-negro-sobre-blanco-ilustraci%C3%B3n-vectorial-aislada.jpg?s=612x612&w=0&k=20&c=txMcf08leDiIk8u1GnqJ8Qjs1DZqBT9-qYh6HPe-hWE="> 
+                 <br>
+                  <a type="button" class="btn btn-outline-dark" class="btn btn-primary" [routerLink]="['/gactividad']" role="button">Gestionar actividades</a>
+                  
+                </ul>
+                
+              </div>
+              <br>
+              <div class="user-profile-footer2">
+                <ul class="data-list">
+                  <img src="https://cdn-icons-png.flaticon.com/512/5188/5188465.png"> 
+                 <br>
+                 <br>
+                  <a type="button" class="btn btn-outline-dark" class="btn btn-primary" [routerLink]="['/gdonadores']" role="button">Gestionar donadores</a>
+                  
+                </ul>
+                
+              </div>
+              <br>
+              <div class="user-profile-footer2">
+                <ul class="data-list">
+                  <img src="https://cdn-icons-png.flaticon.com/512/42/42506.png"> 
+                 <br>
+                 <br>
+                  <a type="button" class="btn btn-outline-dark" class="btn btn-primary" [routerLink]="['/geventos']" role="button">Gestionar eventos</a>
+                  
+                </ul>
+                
+              </div>
+        </div>
+    </section>
+    
+  </div>
+  
+  
+</body>

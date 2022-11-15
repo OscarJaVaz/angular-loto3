@@ -1,0 +1,102 @@
+<input type="checkbox" id="menu" />
+<label for="menu" class="menu">
+	<span></span>
+	<span></span>
+	<span></span>
+</label>
+
+<nav class="nav">
+	<ul>
+		<li><a [routerLink]="['/admin']">Panel de control</a></li>
+		<li><a [routerLink]="['/gactividad']">Actividades</a></li>
+        <li><a [routerLink]="['/geventos']">Eventos</a></li>
+		<li><a [routerLink]="['/galumnos']">Alumnos</a></li>
+		<li><a [routerLink]="['/home']">Cerrar sesion</a></li>
+	</ul>
+</nav>
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+<div class="app-container">
+  
+  
+  
+  <div class="app-view">
+    
+    <nav class="utility-bar">
+      <div class="utility-bar__inner">
+        <ul class="utility-bar__list">
+          <li class="utility-bar__list-item">
+            
+          </li>
+          <li class="utility-bar__list-item">
+            
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+   
+    <main class="content">
+      <h1>Donadores</h1>
+      <p>Gestionar las donaciones que se han recibido. <a [routerLink]="['/creardon']">Agregar una nueva donaci&oacute;n.</a></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo de donacion</th>
+            <th>Numero de telefono </th>
+            <th>Observaciones</th>
+            <th>Proviene de</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a >Donacion de inmuebles</a>
+            </td>
+            <td>5555555555</td>
+            <td>Ninguna</td>
+            
+            
+            <td>Fundacion Wallbert</td>
+            <td><button class="btn btn-delete">Eliminar donacion</button></td>
+          </tr>
+          <tr>
+            <td>
+              <a >Donacion en especie</a>
+            </td>
+            <td>5629291038</td>
+            <td>Ninguna</td>
+            
+            <td>Organizacion Ayuda a la Comunidad</td>
+            <td><button class="btn btn-delete">Eliminar donacion</button></td>
+          </tr>
+          <tr>
+            <td>
+              <a>Donacion recurrente</a>
+            </td>
+            <td>5619019251</td>
+            <td>Se hara donacion cada mes</td>
+            
+            <td>Persona fisica</td>
+            
+            <td><button class="btn btn-delete">Eliminar donacion</button></td>
+          </tr>
+          <tr>
+            <td>
+              <a>Donacion en especie</a>
+            </td>
+            <td>559282409</td>
+            <td>Ninguna</td>
+            
+            <td>Fundacion Uttec</td>
+            <td><button class="btn btn-delete">Eliminar donacion</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    
+  </div>
+  
+</div>

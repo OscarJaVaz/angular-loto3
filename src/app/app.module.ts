@@ -18,6 +18,15 @@ import { UsuarioperfilComponent } from './view/usuarioperfil/usuarioperfil.compo
 import { EditarusuComponent } from './view/editarusu/editarusu.component';
 import { ActivityComponent } from './view/activity/activity.component';
 import { RegistroactComponent } from './view/registroact/registroact.component';
+import { HorariosComponent } from './view/horarios/horarios.component';
+import { AdminComponent } from './view/admin/admin.component';
+import { GactividadComponent } from './view/gactividad/gactividad.component';
+import { GalumnosComponent } from './view/galumnos/galumnos.component';
+import { GdonadoresComponent } from './view/gdonadores/gdonadores.component';
+import { GeventosComponent } from './view/geventos/geventos.component';
+import { CrearactComponent } from './view/crearact/crearact.component';
+import { CreardonComponent } from './view/creardon/creardon.component';
+import { CreareventComponent } from './view/crearevent/crearevent.component';
 
 
 
@@ -40,6 +49,15 @@ import { RegistroactComponent } from './view/registroact/registroact.component';
     EditarusuComponent,
     ActivityComponent,
     RegistroactComponent,
+    HorariosComponent,
+    AdminComponent,
+    GactividadComponent,
+    GalumnosComponent,
+    GdonadoresComponent,
+    GeventosComponent,
+    CrearactComponent,
+    CreardonComponent,
+    CreareventComponent,
    
   ],
   imports: [

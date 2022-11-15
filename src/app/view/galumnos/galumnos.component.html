@@ -1,0 +1,108 @@
+<input type="checkbox" id="menu" />
+<label for="menu" class="menu">
+	<span></span>
+	<span></span>
+	<span></span>
+</label>
+
+<nav class="nav">
+	<ul>
+		<li><a [routerLink]="['/admin']">Panel de control</a></li>
+		<li><a [routerLink]="['/gactividad']">Actividades</a></li>
+        <li><a [routerLink]="['/geventos']">Eventos</a></li>
+		<li><a [routerLink]="['/galumnos']">Alumnos</a></li>
+		<li><a [routerLink]="['/home']">Cerrar sesion</a></li>
+	</ul>
+</nav>
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+<div class="app-container">
+  
+  
+  
+  <div class="app-view">
+    
+    <nav class="utility-bar">
+      <div class="utility-bar__inner">
+        <ul class="utility-bar__list">
+          <li class="utility-bar__list-item">
+            
+          </li>
+          <li class="utility-bar__list-item">
+            
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+   
+    <main class="content">
+      <h1>Alumnos</h1>
+      <p>Gestionar los alumnos que estes activos e inactivos.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Correo </th>
+            <th>Status</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a >Oscar Jandete</a>
+            </td>
+            <td>oscar@demo.com</td>
+            <td>Activo</td>
+            
+            
+            <td>
+              <button class="btn">Cambiar a inactivo</button>
+              <button class="btn btn-delete">Eliminar alumno</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a >Alejandra Annet</a>
+            </td>
+            <td>ale@demo.com</td>
+            <td>Activo</td>
+            
+            <td>
+              <button class="btn">Cambiar a inactivo</button>
+              <button class="btn btn-delete">Eliminar alumno</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a>Marisol</a>
+            </td>
+            <td>mari@demo.com</td>
+            <td>Activo</td>
+            
+            <td>
+              <button class="btn">Cambiar a inactivo</button>
+              <button class="btn btn-delete">Eliminar alumno</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a>Luis Felipe</a>
+            </td>
+            <td>LuisIslas@demo.com</td>
+            <td>Activo</td>
+            
+            <td>
+              <button class="btn">Cambiar a inactivo</button>
+              <button class="btn btn-delete">Eliminar alumno</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    
+  </div>
+  
+</div>

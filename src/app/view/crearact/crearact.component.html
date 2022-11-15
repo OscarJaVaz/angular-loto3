@@ -1,0 +1,69 @@
+
+ <!--Google Font-->
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet"><input type="checkbox" id="menu" />
+
+
+
+ <input type="checkbox" id="menu" />
+ <label for="menu" class="menu">
+     <span></span>
+     <span></span>
+     <span></span>
+ </label>
+ 
+ <nav class="nav">
+     <ul>
+         <li><a [routerLink]="['/admin']">Panel de control</a></li>
+         <li><a [routerLink]="['/gactividad']">Actividades</a></li>
+         <li><a [routerLink]="['/geventos']">Eventos</a></li>
+         <li><a [routerLink]="['/galumnos']">Usuarios</a></li>
+         <li><a [routerLink]="['/home']">Cerrar sesion</a></li>
+     </ul>
+ </nav>
+
+
+<main>
+	<header>
+		<h1><i class="fa fa-picture-o" aria-hidden="true"></i></h1>
+	</header>
+	<section>
+		
+<div id='container'>
+	<div class='whysign'>
+    <h1>Crear una nueva actividad</h1>
+     
+  </div>
+  <div class='signup'>
+	
+     <form>
+       <input type='text' placeholder='Nombre:'  />
+       <input type='text' placeholder='Descripcion:'  />
+       
+       
+       
+      
+        </form>
+
+  </div>
+  
+  <div class="lado">
+	<form >
+        <input type='text' placeholder='Status: '  />
+	
+	
+	<input type='submit' [routerLink]="['/gactividad']" placeholder='Actualizar' />
+</form>
+  </div>
+  
+</div>
+
+	</section>
+	<div class="img">
+		<h1><i class="fa fa-picture-o" aria-hidden="true"></i></h1>
+	</div>
+	
+	
+</main>
+
+

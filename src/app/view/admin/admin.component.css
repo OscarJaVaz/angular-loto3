@@ -120,8 +120,71 @@
 
 
 
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #ffffff;
+  }
+  
+  .main-nav {
+    background: #3b4094;
+    padding: 1em;
+    padding-bottom: 4em;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  .main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .main-nav ul li {
+    width: 100px;
+    display: inline-block;
+    color: #fff;
+    padding: 1.5em 1em;
+    text-align: center;
+    border-radius: 10px;
+    margin-right: 1em;
+    cursor: pointer;
+  }
+  .main-nav ul li:last-of-type {
+    margin-right: 0;
+  }
+  .main-nav ul li:hover {
+    background: #1b1e57;
+  }
+  .main-nav ul li i {
+    display: block;
+    font-size: 2.5em;
+  }
+  .main-nav ul li span {
+    display: block;
+    margin-top: 1em;
+  }
+  
+  .content {
+    width: 90%;
+    height: 1100px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: -3em;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 1em;
+  }
+  .content h1.title {
+    margin: 0;
+    padding-bottom: 0.4em;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+  }
+
+  
 
 
+
+
+  
   .user-profile .user-profile-body,
   .user-profile {
     display: flex;
@@ -160,16 +223,31 @@
   .user-profile .user-profile-bio {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     padding: 1.5rem 2rem;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     border-radius: 10px;
     width: 100%;
+    
+  }
+
+  
+
+  img{
+    width: 20%;
+    height: 20%;
+    
+   align-items: center;
+    text-align: center;
+    
   }
 
   .user-profile-footer1{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    
     padding: 1.5rem 2rem;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
     background-color: #fff;
@@ -180,6 +258,18 @@
   .user-profile-footer2{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .user-profile-footer3{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 1.5rem 2rem;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
     background-color: #fff;
@@ -193,6 +283,7 @@
   .user-profile .data-list {
     width: 80%;
     list-style: none;
+    text-align: center;
   }
   .user-profile .data-list li {
     padding: 10px 0;
@@ -229,7 +320,7 @@
     background: #292c6d;
     color: #ffffff;
     font-size: 16px;
-
+    
     align-items: center;
     cursor: pointer;
     box-shadow: 0 6px #ff0030;
@@ -242,130 +333,3 @@
   color: white;
   background-color: #ca2828;
 }
-
-
-
-
-  /*FOOTER*/
-  main footer {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 5px 5px 5px;
-    background-color: #3b4094;
-  }
-  main footer::after {
-    clear: both;
-    content: "";
-    display: block;
-  }
-  main footer .logo {
-    font-size: 28px;
-    color: whitesmoke;
-    line-height: 0;
-    margin-bottom: 8px;
-    margin-right: 4px;
-  }
-  @media screen and (min-width: 1024px) {
-    main footer .logo {
-      float: left;
-      margin-bottom: 0;
-    }
-  }
-  main footer ul {
-    line-height: 1.5;
-    margin: 0 0 16px 0;
-    padding: 0;
-  }
-  main footer ul::after {
-    clear: both;
-    content: "";
-    display: block;
-  }
-  @media screen and (min-width: 1024px) {
-    main footer ul {
-      float: left;
-      line-height: 1.8;
-      margin-bottom: 0;
-      margin-left: 16px;
-    }
-    main footer ul::after {
-      clear: both;
-      content: "";
-      display: block;
-    }
-  }
-  main footer ul li {
-    list-style: none;
-    padding-right: 16px;
-  }
-  @media screen and (min-width: 1024px) {
-    main footer ul li {
-      display: inline;
-      text-align: left;
-    }
-  }
-  main footer ul li a {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  main footer ul li a:focus, main footer ul li a:hover {
-    color: white;
-  }
-  @media screen and (min-width: 1024px) {
-    main footer .secondary-links {
-      float: right;
-    }
-  }
-  main footer .secondary-links li a {
-    font-size: 12px;
-    font-weight: 100 !important;
-  }
-  main footer .secondary-links .social {
-    margin: 1em 0 0 0;
-  }
-  @media screen and (min-width: 1024px) {
-    main footer .secondary-links .social {
-      float: right;
-      margin-top: 0;
-    }
-  }
-  main footer .secondary-links .social li {
-    float: left;
-    font-size: 1em;
-    line-height: 0;
-    margin: 0;
-    padding-right: 0.7em;
-  }
-  main footer .secondary-links .social li:last-child {
-    padding-right: 0;
-  }
-  main footer .secondary-links .social li > a {
-    position: relative;
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    color: #444;
-    text-align: center;
-    line-height: 30px;
-  }
-  main footer .secondary-links .social li > a:hover {
-    background-color: white;
-  }
-
-  .secondary-links img{
-   
-    transition:all 0.5s ease-out; border-radius:50px;
-    }
-    .secondary-links img:hover{
-    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
-    transform:translate(0px, -10px); 
-    }
-
-
