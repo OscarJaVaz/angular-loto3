@@ -22,6 +22,13 @@ import { GeventosComponent } from './view/geventos/geventos.component';
 import { CrearactComponent } from './view/crearact/crearact.component';
 import { CreardonComponent } from './view/creardon/creardon.component';
 import { CreareventComponent } from './view/crearevent/crearevent.component';
+import { InstructorComponent } from './view/instructor/instructor.component';
+import { IperfilComponent } from './view/iperfil/iperfil.component';
+import { IeditarComponent } from './view/ieditar/ieditar.component';
+import { IhorariosComponent } from './view/ihorarios/ihorarios.component';
+import { IregistrarseComponent } from './view/iregistrarse/iregistrarse.component';
+import { IactividadComponent } from './view/iactividad/iactividad.component';
+import { IalumnosComponent } from './view/ialumnos/ialumnos.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -47,6 +54,13 @@ const routes: Routes = [
   {path: 'crearact', component: CrearactComponent, data:{title: 'Loto Tres Crear actividad'}},
   {path: 'creardon', component: CreardonComponent, data:{title: 'Loto Tres Crear donacion'}},
   {path: 'crearevent', component: CreareventComponent, data:{title: 'Loto Tres Crear Evento'}},
+  {path: 'instructor', component: InstructorComponent, data:{title: 'Loto Tres Instructor'}},
+  {path: 'iperfil', component: IperfilComponent, data:{title: 'Loto Tres Iperfil'}},
+  {path: 'ieditar', component: IeditarComponent, data:{title: 'Loto Tres Editar Instructor'}},
+  {path: 'ihorarios', component: IhorariosComponent, data:{title: 'Loto Tres Horarios Instructor'}},
+  {path: 'iregistrarse', component: IregistrarseComponent, data:{title: 'Loto Tres Registro Actividad Instructor'}},
+  {path: 'iactividad', component: IactividadComponent, data:{title: 'Loto Tres Actividad Instructor'}},
+  {path: 'ialumnos', component: IalumnosComponent, data:{title: 'Loto Tres Alumnos Instructor'}},
 ];
 
 @NgModule({
@@ -58,4 +72,5 @@ export const RoutingComponents = [HomeComponent, DonativosComponent, IsesionComp
    MenuComponent, ActividadesComponent, CampanaComponent, UsuarioperfilComponent, EditarusuComponent,
   ActivityComponent, RegistroactComponent, HorariosComponent, AdminComponent, GactividadComponent,
   GalumnosComponent, GdonadoresComponent, GeventosComponent, CrearactComponent, CreardonComponent,
-  CreareventComponent];
+  CreareventComponent, InstructorComponent, IperfilComponent, IeditarComponent, IhorariosComponent,
+IregistrarseComponent, IactividadComponent, IalumnosComponent];

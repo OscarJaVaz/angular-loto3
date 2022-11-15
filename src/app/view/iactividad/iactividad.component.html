@@ -1,0 +1,72 @@
+<input type="checkbox" id="menu" />
+<label for="menu" class="menu">
+	<span></span>
+	<span></span>
+	<span></span>
+</label>
+
+<nav class="nav">
+	<ul>
+		<li><a [routerLink]="['/admin']">Panel de control</a></li>
+		<li><a [routerLink]="['/gactividad']">Actividades</a></li>
+        <li><a [routerLink]="['/geventos']">Eventos</a></li>
+		<li><a [routerLink]="['/galumnos']">Alumnos</a></li>
+		<li><a [routerLink]="['/home']">Cerrar sesion</a></li>
+	</ul>
+</nav>
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+<div class="app-container">
+  
+  
+  
+  <div class="app-view">
+    
+    <nav class="utility-bar">
+      <div class="utility-bar__inner">
+        <ul class="utility-bar__list">
+          <li class="utility-bar__list-item">
+            
+          </li>
+          <li class="utility-bar__list-item">
+            
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+    
+    <main class="content">
+      <h1>Actividades</h1>
+      <p>Gestiona las actividades que cursas.</p> 
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre de la actividad</th>
+            <th>Descripcion </th>
+            <th>Status</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a>Defensa Personal infantil</a>
+            </td>
+            <td class="desc">CONJUNTO DE HABILIDADES TÉCNICO- TACTICAS ENCAMINADAS A IMPEDIR O 
+                REPELER UNA AGRESIÓN REALIZADAS POR UNO MISMO Y PARA SÍ MISMO.</td>
+            <td>Disponible</td>
+            
+            <td>
+              <button class="btn btn-delete">Salirse de la actividad</button>
+            </td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </main>
+    
+  </div>
+  
+</div>

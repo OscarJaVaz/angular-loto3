@@ -27,6 +27,13 @@ import { GeventosComponent } from './view/geventos/geventos.component';
 import { CrearactComponent } from './view/crearact/crearact.component';
 import { CreardonComponent } from './view/creardon/creardon.component';
 import { CreareventComponent } from './view/crearevent/crearevent.component';
+import { InstructorComponent } from './view/instructor/instructor.component';
+import { IperfilComponent } from './view/iperfil/iperfil.component';
+import { IeditarComponent } from './view/ieditar/ieditar.component';
+import { IregistrarseComponent } from './view/iregistrarse/iregistrarse.component';
+import { IhorariosComponent } from './view/ihorarios/ihorarios.component';
+import { IalumnosComponent } from './view/ialumnos/ialumnos.component';
+import { IactividadComponent } from './view/iactividad/iactividad.component';
 
 
 
@@ -58,6 +65,13 @@ import { CreareventComponent } from './view/crearevent/crearevent.component';
     CrearactComponent,
     CreardonComponent,
     CreareventComponent,
+    InstructorComponent,
+    IperfilComponent,
+    IeditarComponent,
+    IregistrarseComponent,
+    IhorariosComponent,
+    IalumnosComponent,
+    IactividadComponent,
    
   ],
   imports: [

@@ -1,0 +1,316 @@
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    font-family: "Fira Code", monospace;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+  }
+  
+  main {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  p {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    background: linear-gradient(to bottom, #2b2a75, #2b2a75 60%, #fff 60%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-repeat: no-repeat;
+    transition: background 0.2s ease-out;
+    white-space: nowrap;
+  }
+  
+  span {
+    position: relative;
+  }
+  
+  span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background: #2b2a75;
+    bottom: 9px;
+    transition: all 0.2s ease-out;
+  }
+  
+  p:hover {
+    background-position: 0 11px;
+  }
+  
+  span:hover:before {
+    transform: translateY(10px);
+  }
+  
+
+
+
+
+
+
+  * {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+/* Table Styles */
+
+.table-wrapper {
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td,
+.fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #2b2a75;
+}
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #5d5cb8;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+/* Responsivo */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before {
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead,
+    .fl-table tbody,
+    .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child {
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td,
+    .fl-table th {
+        padding: 20px 0.625em 0.625em 0.625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #f8f8f8;
+        border-right: 1px solid #e6e4e4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #e6e4e4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+  /*FOOTER*/
+  
+  main footer {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 5px 5px 5px;
+    background-color: #3b4094;
+  }
+  main footer::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  main footer .logo {
+    font-size: 28px;
+    color: whitesmoke;
+    line-height: 0;
+    margin-bottom: 8px;
+    margin-right: 4px;
+  }
+  @media screen and (min-width: 1024px) {
+    main footer .logo {
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+  main footer ul {
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+    padding: 0;
+  }
+  main footer ul::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  @media screen and (min-width: 1024px) {
+    main footer ul {
+      float: left;
+      line-height: 1.8;
+      margin-bottom: 0;
+      margin-left: 16px;
+    }
+    main footer ul::after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+  main footer ul li {
+    list-style: none;
+    padding-right: 16px;
+  }
+  @media screen and (min-width: 1024px) {
+    main footer ul li {
+      display: inline;
+      text-align: left;
+    }
+  }
+  main footer ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  main footer ul li a:focus, main footer ul li a:hover {
+    color: white;
+  }
+  @media screen and (min-width: 1024px) {
+    main footer .secondary-links {
+      float: right;
+    }
+  }
+  main footer .secondary-links li a {
+    font-size: 12px;
+    font-weight: 100 !important;
+  }
+  main footer .secondary-links .social {
+    margin: 1em 0 0 0;
+  }
+  @media screen and (min-width: 1024px) {
+    main footer .secondary-links .social {
+      float: right;
+      margin-top: 0;
+    }
+  }
+  main footer .secondary-links .social li {
+    float: left;
+    font-size: 1em;
+    line-height: 0;
+    margin: 0;
+    padding-right: 0.7em;
+  }
+  main footer .secondary-links .social li:last-child {
+    padding-right: 0;
+  }
+  main footer .secondary-links .social li > a {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    color: #444;
+    text-align: center;
+    line-height: 30px;
+  }
+  main footer .secondary-links .social li > a:hover {
+    background-color: white;
+  }
+
+  .secondary-links img{
+   
+    transition:all 0.5s ease-out; border-radius:50px;
+    }
+    .secondary-links img:hover{
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    transform:translate(0px, -10px); 
+    }
+

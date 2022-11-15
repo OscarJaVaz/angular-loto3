@@ -1,0 +1,110 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<input type="checkbox" id="menu" />
+<label for="menu" class="menu">
+	<span></span>
+	<span></span>
+	<span></span>
+</label>
+
+<nav class="nav">
+	<ul>
+		<li><a [routerLink]="['/iperfil']">Perfil</a></li>
+		<li><a [routerLink]="['/ialumnos']">Alumnos</a></li>
+        <li><a [routerLink]="['/iactividad']">Actividad</a></li>
+		<li><a [routerLink]="['/home']">Cerrar sesion</a></li>
+	</ul>
+</nav>
+  
+
+
+<header class='main-nav'>
+    <br>
+    <h1 class="bienvenida">Bienvenido, instructor</h1>
+  </header>
+<!-- /.row -->
+<br>
+<br>
+<h1 class="panel">Panel de control</h1>
+<br>
+<div class="row">
+     <div class="col-lg-3 col-md-6">
+          <div class="panel panel-primary">
+               <div class="panel-heading">
+                    <div class="row">
+                         <div class="col-xs-3">
+                            <i class="fa fa-user fa-4x"></i>   
+                         </div>
+                         <div class="col-xs-9 text-right">
+                              <div class='huge'></div>
+                              <div class="under-number">Perfil</div>
+                         </div>
+                    </div>
+               </div>
+               <a [routerLink]="['/iperfil']">
+                    <div class="panel-footer">
+                         <span class="pull-left blue">Mas detalles</span>
+                         <span class="pull-right blue"><i class="fa fa-arrow-circle-right"></i></span>
+                         <div class="clearfix"></div>
+                    </div>
+               </a>
+          </div>
+     </div>
+
+     <!-- ********************************************************************************************************* -->
+     
+
+     <!-- ********************************************************************************************************* -->
+
+     <div class="col-lg-3 col-md-6">
+          <div class="panel panel-yellow">
+               <div class="panel-heading">
+                    <div class="row">
+                         <div class="col-xs-3">
+                            <i class="fa fa-user fa-4x"></i> 
+                         </div>
+                         <div class="col-xs-9 text-right">
+                              <div class='huge'></div>
+                              <div class="under-number"> Alumnos</div>
+                         </div>
+                    </div>
+               </div>
+               <a [routerLink]="['/ialumnos']">
+                    <div class="panel-footer">
+                         <span class="pull-left yellow">Mas detalles</span>
+                         <span class="pull-right yellow"><i class="fa fa-arrow-circle-right"></i></span>
+                         <div class="clearfix"></div>
+                    </div>
+               </a>
+          </div>
+     </div>
+
+     <!-- ********************************************************************************************************* -->
+
+     <div class="col-lg-3 col-md-6">
+          <div class="panel panel-red">
+               <div class="panel-heading">
+                    <div class="row">
+                         <div class="col-xs-3">
+                            <i class="fa fa-file-text fa-4x"></i>
+                         </div>
+                         <div class="col-xs-9 text-right">
+                              <div class='huge'></div>
+                              <div class="under-number">Actividad</div>
+                         </div>
+                    </div>
+               </div>
+               <a [routerLink]="['/iactividad']">
+                    <div class="panel-footer">
+                         <span class="pull-left red">Mas detalles</span>
+                         <span class="pull-right red"><i class="fa fa-arrow-circle-right"></i></span>
+                         <div class="clearfix"></div>
+                    </div>
+               </a>
+          </div>
+     </div>
+</div>
+<!-- /.row -->
