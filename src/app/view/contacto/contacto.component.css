@@ -21,6 +21,7 @@ html {
     font-weight: 300;
     line-height: 1.75;
     
+    height: 100vh;
     overflow-x: hidden;
   }
   
@@ -441,3 +442,5 @@ section {
 .contact-page-form form {
   padding: 20px 15px 0;
 }
+
+/*OLAS*/

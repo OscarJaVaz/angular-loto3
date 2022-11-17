@@ -348,7 +348,7 @@ html {
   border-radius: 5px;
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
   cursor: pointer;
-  transition: 0.5s;  
+  transition: 3s;  
   }
 
 .login:hover{
@@ -417,7 +417,7 @@ html {
       padding: 5px 0;
       text-decoration: none;
       text-shadow: none;
-      border-radius: 3px;
+      border-radius: 25px;
       box-shadow: none;
       transition: 0.25s;
       display: block;
