@@ -72,10 +72,11 @@ img{
     padding: 20px 10px;
 }
 .details>h3{
-    color: #ffffff;
+    color: #dbdada;
     font-weight: 600;
     font-size: 18px;
     margin: 10px 0 15px 0;
+    justify-content: center;
 }
 .details>p{
     color: #a0a0a0;
