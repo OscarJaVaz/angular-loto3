@@ -448,11 +448,11 @@ html {
     border-radius: 3px;
 }
   [type=submit] {
-    margin-top: 25px;
+    margin-top: 5px;
     width: 80%;
     border: 0;
     background-color: #3b4094;
-    border-radius: 5px;
+    border-radius: 25px;
     height: 50px;
     color: white;
     font-weight: 400;
@@ -523,7 +523,7 @@ html {
   select{
     display: block;
     margin: 0 auto;
-    
+    border-radius: 25px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;

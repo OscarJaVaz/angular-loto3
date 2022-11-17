@@ -61,6 +61,7 @@ const routes: Routes = [
   {path: 'iregistrarse', component: IregistrarseComponent, data:{title: 'Loto Tres Registro Actividad Instructor'}},
   {path: 'iactividad', component: IactividadComponent, data:{title: 'Loto Tres Actividad Instructor'}},
   {path: 'ialumnos', component: IalumnosComponent, data:{title: 'Loto Tres Alumnos Instructor'}},
+  
 ];
 
 @NgModule({

@@ -193,6 +193,8 @@ body {
     border: 0;
     color: white;
     background-color: #3b4094;
+    border-radius: 25px;
+    font-size: 13px;
   }
   .btn:first-child {
     margin-left: 0;

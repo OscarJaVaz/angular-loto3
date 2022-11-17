@@ -29,7 +29,7 @@
     border-radius: 0.6em;
     color: #1f003b;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 3s;
     background-color: #ffffff;
   }
   .card .img-container {
@@ -68,6 +68,7 @@
   .card:hover {
     background: linear-gradient(#3b4094, #8567f7);
     color: #ffffff;
+    transition: 3s;
   }
   .card:hover .img-container {
     transform: scale(1.15);

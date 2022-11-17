@@ -160,20 +160,7 @@ main section {
 main section p {
   margin-bottom: 30px;
 }
-main .img {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 181px;
-  background-color: rgb(255, 255, 255);
-  background-image: url(https://fondify-media.s3.amazonaws.com/organizations/covers/2021-07-12/picture_PL6RTId.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
 
-}
 main .img h1 {
   color: rgba(255, 255, 255, 0.2);
 }
@@ -306,7 +293,7 @@ main footer .secondary-links .social li > a:hover {
     text-align: center;
     background-color: #ECF0F1;
     border: 2px solid transparent;
-    border-radius: 3px;
+    border-radius: 25px;
     font-size: 16px;
     font-weight: 200;
     padding: 10px 0;
@@ -330,8 +317,8 @@ main footer .secondary-links .social li > a:hover {
     padding: 10px 0;
     text-decoration: none;
     text-shadow: none;
-    border-radius: 3px;
-    box-shadow: none;
+    border-radius: 25px;
+    box-shadow: 0 6px #ff0030;
     transition: 0.25s;
     display: block;
     width: 250px;
@@ -403,7 +390,7 @@ section {
   border-radius: 5px;
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
   cursor: pointer;
-  transition: 0.5s;
+  transition: 2.5s;
 }
 h3 {
   font-size: 20px;
