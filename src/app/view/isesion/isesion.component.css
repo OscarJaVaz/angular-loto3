@@ -381,7 +381,7 @@ section {
   text-align: center;
 }
 .card {
-  width: 100%;
+  width: 105%;
   height: 100%;
   padding: 2em 1.5em;
   background: linear-gradient(#ffffff 50%, #3b4094 50%);
@@ -392,6 +392,11 @@ section {
   cursor: pointer;
   transition: 2.5s;
 }
+
+
+
+
+
 h3 {
   font-size: 20px;
   font-weight: 600;
