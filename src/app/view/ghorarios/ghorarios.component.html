@@ -1,0 +1,179 @@
+<input type="checkbox" id="menu" />
+<label for="menu" class="menu">
+	<span></span>
+	<span></span>
+	<span></span>
+</label>
+
+<nav class="nav">
+	<ul>
+		<li><a [routerLink]="['/admin']">Panel de control</a></li>
+		<li><a [routerLink]="['/gactividad']">Actividades</a></li>
+        <li><a [routerLink]="['/geventos']">Eventos</a></li>
+		<li><a [routerLink]="['/galumnos']">Alumnos</a></li>
+		<li><a [routerLink]="['/home']">Cerrar sesion</a></li>
+	</ul>
+</nav>
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+<div class="app-container">
+  
+  
+  
+  <div class="app-view">
+    
+    <nav class="utility-bar">
+      <div class="utility-bar__inner">
+        <ul class="utility-bar__list">
+          <li class="utility-bar__list-item">
+            
+          </li>
+          <li class="utility-bar__list-item">
+            
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+   
+    <main class="content">
+      <h1>Horarios</h1>
+      <p>Gestionar los horarios de la sesi&oacute;n de las actividades.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Actividad</th>
+            <th>Horario de sesi&oacute;n</th>
+            <th>Status</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a >Yoga</a>
+            </td>
+            <td [align]="['left']">Lunes(7:00pm-8:00pm)
+                Martes(8:30am-9:30am)
+                Miercoles(7:00pm-8:00pm)
+                Jueves(8:30am-9:30am)
+            </td>
+            <td>Activo</td>
+            
+            
+            <td>
+              <button class="btn">Cambiar horarios</button>
+              <button class="btn btn-delete">Eliminar horarios</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a >Defensa Personal Infantil</a>
+            </td>
+            <td [align]="['left']">Martes(4:30pm-6:30pm)
+                Miercoles(4:30pm-6:30pm)
+            </td>
+            <td>Activo</td>
+            
+            <td>
+              <button class="btn">Cambiar horarios</button>
+              <button class="btn btn-delete">Eliminar horarios</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a>Tejido</a>
+            </td>
+            <td>Martes(9:30am-10:30am)</td>
+            <td>Activo</td>
+            
+            <td>
+              <button class="btn">Cambiar horarios</button>
+              <button class="btn btn-delete">Eliminar horarios</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a>Meditaci&oacute;n</a>
+            </td>
+            <td>Martes(11:00am-12:00pm)</td>
+            <td>Activo</td>
+            
+            <td>
+              <button class="btn">Cambiar horarios</button>
+              <button class="btn btn-delete">Eliminar horarios</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a>Reciclado</a>
+            </td>
+            <td>Miercoles(10:00am-11:00am)</td>
+            <td>Activo</td>
+            
+            <td>
+              <button class="btn">Cambiar horarios</button>
+              <button class="btn btn-delete">Eliminar horarios</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a>Tanatologia</a>
+            </td>
+            <td>Jueves(10:00am-11:00am)</td>
+            <td>Activo</td>
+            
+            <td>
+              <button class="btn">Cambiar horarios</button>
+              <button class="btn btn-delete">Eliminar horarios</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a>Pintura y repujado</a>
+            </td>
+            <td>Jueves(11:30am-1:30pm)</td>
+            <td>Activo</td>
+            
+            <td>
+              <button class="btn">Cambiar horarios</button>
+              <button class="btn btn-delete">Eliminar horarios</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a>Baile</a>
+            </td>
+            <td>Viernes(8:00am-9:30am)</td>
+            <td>Activo</td>
+            
+            <td>
+              <button class="btn">Cambiar horarios</button>
+              <button class="btn btn-delete">Eliminar horarios</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a>Computacion</a>
+            </td>
+            <td>Viernes(11:00am-12:00pm)</td>
+            <td>Activo</td>
+            
+            <td>
+              <button class="btn">Cambiar horarios</button>
+              <button class="btn btn-delete">Eliminar horarios</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    
+  </div>
+  
+</div>

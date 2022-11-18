@@ -19,6 +19,7 @@ import { GactividadComponent } from './view/gactividad/gactividad.component';
 import { GalumnosComponent } from './view/galumnos/galumnos.component';
 import { GdonadoresComponent } from './view/gdonadores/gdonadores.component';
 import { GeventosComponent } from './view/geventos/geventos.component';
+import { GhorariosComponent } from './view/ghorarios/ghorarios.component';
 import { CrearactComponent } from './view/crearact/crearact.component';
 import { CreardonComponent } from './view/creardon/creardon.component';
 import { CreareventComponent } from './view/crearevent/crearevent.component';
@@ -29,6 +30,7 @@ import { IhorariosComponent } from './view/ihorarios/ihorarios.component';
 import { IregistrarseComponent } from './view/iregistrarse/iregistrarse.component';
 import { IactividadComponent } from './view/iactividad/iactividad.component';
 import { IalumnosComponent } from './view/ialumnos/ialumnos.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -61,7 +63,7 @@ const routes: Routes = [
   {path: 'iregistrarse', component: IregistrarseComponent, data:{title: 'Loto Tres Registro Actividad Instructor'}},
   {path: 'iactividad', component: IactividadComponent, data:{title: 'Loto Tres Actividad Instructor'}},
   {path: 'ialumnos', component: IalumnosComponent, data:{title: 'Loto Tres Alumnos Instructor'}},
-  
+  {path: 'ghorarios', component: GhorariosComponent, data:{title: 'Loto Tres Horarios'}},
 ];
 
 @NgModule({
@@ -74,4 +76,4 @@ export const RoutingComponents = [HomeComponent, DonativosComponent, IsesionComp
   ActivityComponent, RegistroactComponent, HorariosComponent, AdminComponent, GactividadComponent,
   GalumnosComponent, GdonadoresComponent, GeventosComponent, CrearactComponent, CreardonComponent,
   CreareventComponent, InstructorComponent, IperfilComponent, IeditarComponent, IhorariosComponent,
-IregistrarseComponent, IactividadComponent, IalumnosComponent];
+IregistrarseComponent, IactividadComponent, IalumnosComponent, GhorariosComponent];

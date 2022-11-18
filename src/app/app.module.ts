@@ -34,6 +34,7 @@ import { IregistrarseComponent } from './view/iregistrarse/iregistrarse.componen
 import { IhorariosComponent } from './view/ihorarios/ihorarios.component';
 import { IalumnosComponent } from './view/ialumnos/ialumnos.component';
 import { IactividadComponent } from './view/iactividad/iactividad.component';
+import { GhorariosComponent } from './view/ghorarios/ghorarios.component';
 
 
 
@@ -72,6 +73,7 @@ import { IactividadComponent } from './view/iactividad/iactividad.component';
     IhorariosComponent,
     IalumnosComponent,
     IactividadComponent,
+    GhorariosComponent,
    
   ],
   imports: [
