@@ -35,6 +35,8 @@ import { IhorariosComponent } from './view/ihorarios/ihorarios.component';
 import { IalumnosComponent } from './view/ialumnos/ialumnos.component';
 import { IactividadComponent } from './view/iactividad/iactividad.component';
 import { GhorariosComponent } from './view/ghorarios/ghorarios.component';
+import { EEventoComponent } from './view/e-evento/e-evento.component';
+import { EActividadComponent } from './view/e-actividad/e-actividad.component';
 
 
 
@@ -74,6 +76,8 @@ import { GhorariosComponent } from './view/ghorarios/ghorarios.component';
     IalumnosComponent,
     IactividadComponent,
     GhorariosComponent,
+    EEventoComponent,
+    EActividadComponent,
    
   ],
   imports: [

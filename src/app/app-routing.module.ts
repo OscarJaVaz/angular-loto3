@@ -30,6 +30,8 @@ import { IhorariosComponent } from './view/ihorarios/ihorarios.component';
 import { IregistrarseComponent } from './view/iregistrarse/iregistrarse.component';
 import { IactividadComponent } from './view/iactividad/iactividad.component';
 import { IalumnosComponent } from './view/ialumnos/ialumnos.component';
+import { EEventoComponent } from './view/e-evento/e-evento.component';
+import { EActividadComponent } from './view/e-actividad/e-actividad.component';
 
 
 const routes: Routes = [
@@ -64,6 +66,8 @@ const routes: Routes = [
   {path: 'iactividad', component: IactividadComponent, data:{title: 'Loto Tres Actividad Instructor'}},
   {path: 'ialumnos', component: IalumnosComponent, data:{title: 'Loto Tres Alumnos Instructor'}},
   {path: 'ghorarios', component: GhorariosComponent, data:{title: 'Loto Tres Horarios'}},
+  {path: 'editarevent', component: EEventoComponent, data:{title: 'loto tres editar evento'}},
+  {path: 'editaractividad', component: EActividadComponent, data:{title: 'Loto Tres editar actividad'}},
 ];
 
 @NgModule({
@@ -76,4 +80,5 @@ export const RoutingComponents = [HomeComponent, DonativosComponent, IsesionComp
   ActivityComponent, RegistroactComponent, HorariosComponent, AdminComponent, GactividadComponent,
   GalumnosComponent, GdonadoresComponent, GeventosComponent, CrearactComponent, CreardonComponent,
   CreareventComponent, InstructorComponent, IperfilComponent, IeditarComponent, IhorariosComponent,
-IregistrarseComponent, IactividadComponent, IalumnosComponent, GhorariosComponent];
+  IregistrarseComponent, IactividadComponent, IalumnosComponent, GhorariosComponent, EEventoComponent,
+  EActividadComponent];
