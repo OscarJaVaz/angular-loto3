@@ -37,6 +37,7 @@ import { IactividadComponent } from './view/iactividad/iactividad.component';
 import { GhorariosComponent } from './view/ghorarios/ghorarios.component';
 import { EEventoComponent } from './view/e-evento/e-evento.component';
 import { EActividadComponent } from './view/e-actividad/e-actividad.component';
+import { TarjetasComponent } from './cabecera/tarjetas/tarjetas.component';
 
 
 
@@ -78,6 +79,7 @@ import { EActividadComponent } from './view/e-actividad/e-actividad.component';
     GhorariosComponent,
     EEventoComponent,
     EActividadComponent,
+    TarjetasComponent,
    
   ],
   imports: [
