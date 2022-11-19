@@ -4,6 +4,8 @@ import { Usuarioo } from '../models/usuarioo';
 import {NgxSpinnerService} from "ngx-spinner";
 import {Router} from "@angular/router";
 import {Observable} from "rxjs";
+import { Constants } from "../constants/constants";
+import { constants } from "buffer";
 
 
 @Injectable({
