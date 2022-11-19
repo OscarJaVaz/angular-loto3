@@ -1,8 +1,9 @@
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import { Injectable,Observable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Usuarioo } from '../models/usuarioo';
 import {NgxSpinnerService} from "ngx-spinner";
 import {Router} from "@angular/router";
+import {Observable} from "rxjs";
 
 
 @Injectable({
