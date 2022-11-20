@@ -13,7 +13,7 @@ import { constants } from "buffer";
 })
 export class AuthService {
 
-  private _usuario: Usuarioo = new Usuarioo();
+  private _usuarioo: Usuarioo = new Usuarioo();
   private _token: string = '';
   private _tokenRefresh: string = '';
 
@@ -22,7 +22,7 @@ export class AuthService {
               private router: Router) {
   }
 
-  get usuario(): Usuarioo {
+  get usuarioo(): Usuarioo {
     if (localStorage.getItem('user_fundacion') != null) {
       let localValue = localStorage.getItem('user_fundacion');
       if (localValue == null) {
@@ -35,22 +35,22 @@ export class AuthService {
   }
 
   set usuario(value: Usuarioo) {
-    this._usuario = value;
+    this._usuarioo = value;
   }
 
-  guardarUsuario(accessToken: string) {
+  guardarUsuarioo(accessToken: string) {
     const payload = this.obtenerDatosToken(accessToken);
-    this._usuario = new Usuarioo();
-    this._usuario.nombre = payload.nombre;
-    this._usuario.apellido = payload.apellido;
-    this._usuario.fecha_creaci = payload._fecha_creaci;
-    this._usuario.correo = payload.correo;
-    this._usuario.status = payload.status;
-    this._usuario.telefono = payload.telefono;
-    this._usuario.fecha_actual = payload.fecha_actual;
-    this._usuario.genero = payload.genero;
+    this._usuarioo = new Usuarioo();
+    this._usuarioo.nombre = payload.nombre;
+    this._usuarioo.apellido = payload.apellido;
+    this._usuarioo.fecha_creaci = payload._fecha_creaci;
+    this._usuarioo.correo = payload.correo;
+    this._usuarioo.status = payload.status;
+    this._usuarioo.telefono = payload.telefono;
+    this._usuarioo.fecha_actual = payload.fecha_actual;
+    this._usuarioo.genero = payload.genero;
 
-    localStorage.setItem('user_fundacion', JSON.stringify(this._usuario));
+    localStorage.setItem('user_fundacion', JSON.stringify(this._usuarioo));
   }
 
   get token(): string {
@@ -119,7 +119,7 @@ export class AuthService {
     return null;
   }
 
-  login(usuario: Usuarioo): Observable<any> {
+  login(usuarioo: Usuarioo): Observable<any> {
     const url = Constants.HOST + '/oauth/token';
     const credentials = btoa(Constants.APPNAME + ':' + Constants.APPPASSWORD);
     const httpHeaders = new HttpHeaders({
@@ -128,15 +128,15 @@ export class AuthService {
     });
     const params = new URLSearchParams();
     params.set('grant_type', 'password');
-    params.set('password', usuario.contrasena);
-    params.set('username', usuario.correo);
+    params.set('password', usuarioo.contrasena);
+    params.set('username', usuarioo.correo);
     return this.http.post<any>(url, params.toString(), {headers: httpHeaders});
   }
 
   logout() {
     this.spinner.show().then(() => {
       this._token = '';
-      this._usuario = new Usuarioo();
+      this._usuarioo = new Usuarioo();
       this._tokenRefresh = '';
       localStorage.clear();
       this.router.navigate(['/']).then(()=>{this.spinner.hide().then(() => {})});
