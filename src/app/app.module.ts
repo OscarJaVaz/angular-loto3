@@ -38,6 +38,7 @@ import { GhorariosComponent } from './view/ghorarios/ghorarios.component';
 import { EEventoComponent } from './view/e-evento/e-evento.component';
 import { EActividadComponent } from './view/e-actividad/e-actividad.component';
 import { TarjetasComponent } from './cabecera/tarjetas/tarjetas.component';
+import {NgxSpinnerModule} from "ngx-spinner";
 
 
 
