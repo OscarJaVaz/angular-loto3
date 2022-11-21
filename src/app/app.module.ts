@@ -81,11 +81,13 @@ import {NgxSpinnerModule} from "ngx-spinner";
     EEventoComponent,
     EActividadComponent,
     TarjetasComponent,
+
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
