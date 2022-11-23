@@ -30,7 +30,7 @@ export class IsesionComponent implements OnInit {
 
   login() {
     if (this.usuarioo.correo == null || this.usuarioo.contrasena == null || this.usuarioo.correo == '' || this.usuarioo.contrasena == '') {
-      swal.fire('Error', 'Correo o contraseña vacio', 'error').then(() => {});
+      swal.fire('Error', 'Email o contraseña vacio', 'error').then(() => {});
       return;
     }
     this.spinner.show().then(() =>{
@@ -46,6 +46,7 @@ export class IsesionComponent implements OnInit {
           if (err.status == 400) {
             swal.fire('Error', 'Correo o contraseña incorrectos', 'error').then(() => {});
           }
+
         },
         complete: () => {
           this.spinner.hide().then(() => {});

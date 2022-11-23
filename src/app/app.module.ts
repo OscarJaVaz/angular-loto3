@@ -39,7 +39,9 @@ import { EEventoComponent } from './view/e-evento/e-evento.component';
 import { EActividadComponent } from './view/e-actividad/e-actividad.component';
 import { TarjetasComponent } from './cabecera/tarjetas/tarjetas.component';
 import {NgxSpinnerModule} from "ngx-spinner";
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { Token } from '@angular/compiler';
+import { AuthInterceptor } from './interceptor/auth-interceptor.service';
 
 
 @NgModule({
@@ -87,9 +89,13 @@ import {NgxSpinnerModule} from "ngx-spinner";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:Token,multi: true},
+    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
