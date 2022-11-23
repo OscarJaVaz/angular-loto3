@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
@@ -39,9 +39,13 @@ import { EEventoComponent } from './view/e-evento/e-evento.component';
 import { EActividadComponent } from './view/e-actividad/e-actividad.component';
 import { TarjetasComponent } from './cabecera/tarjetas/tarjetas.component';
 import {NgxSpinnerModule} from "ngx-spinner";
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { Token } from '@angular/compiler';
-import { AuthInterceptor } from './interceptor/auth-interceptor.service';
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {AuthInterceptor} from "./interceptor/auth-interceptor.service";
+import {Token} from "./interceptor/token.service";
+import {DatePipe, registerLocaleData} from "@angular/common";
+import localES from '@angular/common/locales/es-MX'
+registerLocaleData(localES, 'mx');
+
 
 
 @NgModule({
@@ -84,7 +88,7 @@ import { AuthInterceptor } from './interceptor/auth-interceptor.service';
     EActividadComponent,
     TarjetasComponent,
 
-   
+
   ],
   imports: [
     BrowserModule,
@@ -93,8 +97,11 @@ import { AuthInterceptor } from './interceptor/auth-interceptor.service';
     HttpClientModule
   ],
   providers: [
-    {provide:HTTP_INTERCEPTORS,useClass:Token,multi: true},
-    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true},
+    DatePipe,
+    {provide: LOCALE_ID, useValue: 'mx'},
+    {provide: HTTP_INTERCEPTORS, useClass: Token, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+
   ],
   bootstrap: [AppComponent]
 })

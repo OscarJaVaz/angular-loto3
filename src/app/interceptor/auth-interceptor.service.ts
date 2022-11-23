@@ -18,7 +18,7 @@ export class AuthInterceptor implements HttpInterceptor {
           if (this.authService.isAuthenticated()) {
             this.authService.logout();
           }
-          this.router.navigate(['/login']).then(() => {
+          this.router.navigate(['/home']).then(() => {
           });
         }
         return throwError(err);
