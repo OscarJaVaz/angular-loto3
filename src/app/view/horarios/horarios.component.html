@@ -65,7 +65,13 @@
         <td></td>
       </tr>
       
-      
+      <table>
+        <tr *ngFor="let dia of dias"; trackBy:trackByClase>
+          <td>
+                  {{dia}}
+        </td>
+          </tr>
+      </table>
     </tbody>
   </table>
 </div>
