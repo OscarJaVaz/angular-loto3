@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {Constants} from "../constants/constants";
+import {Donacion} from "../models/donacion";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class DonacionService {
   constructor(private http: HttpClient) { }
 
   guardar(donacion:Donacion ):Observable<any> {
-    return this.http.get(Constants.HOST + '/donacion/save' + donacion)
+    return this.http.post(Constants.HOST + '/donacion/save' , donacion)
   }
 
   getDonacion():Observable<any> {
