@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
+import {catchError, map, Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {Constants} from "../constants/constants";
 import {Evento} from "../models/evento";
@@ -17,10 +17,26 @@ export class EventoService {
   }
 
   getEvento():Observable<any> {
-    return this.http.get(Constants.HOST + '/evento/getEvento' )
+    return this.http.get(Constants.HOST + '/evento/getEvento' ).pipe(
+      map(value => {
+        return value;
+      }),
+      catchError(err => {
+        throw err;
+        console.log(err);
+      })
+    );
   }
 
   borrar(id:number):Observable<any> {
-    return this.http.get(Constants.HOST + '/evento/delete/' + id)
+    return this.http.delete(Constants.HOST + '/evento/delete/' + id).pipe(
+      map(value => {
+        return value;
+      }),
+      catchError(err => {
+        throw err;
+        console.log(err);
+      })
+    );
   }
 }

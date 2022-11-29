@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
+import {catchError, map, Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {Constants} from "../constants/constants";
+import { Usuarioo } from '../models/usuarioo';
 
 
 
@@ -12,19 +13,45 @@ export class UsuarioService {
 
   constructor(private http: HttpClient) { }
 
-  nuevo(ussurioooo:Ussurioooo):Observable<any> {
-    return this.http.post(Constants.HOST + '/ussurioooo/nuevo/' + ussurioooo)
+  nuevo(ussurioooo:Usuarioo):Observable<any> {
+    return this.http.post(Constants.HOST + '/ussurioooo/nuevo/' , ussurioooo)
   }
 
   getUssurioooos():Observable<any> {
-    return this.http.get(Constants.HOST + '/ussurioooo/getUssurioooos/')
-  }
+    return this.http.get(Constants.HOST + '/ussurioooo/getUssurioooos/').pipe(
+      map( value=>{
+    return value;
+      }),
+  catchError( err => {
+  throw err;
+  console.log(err);
+    })
+      );
+    }
+ 
 
   getUssurioooo():Observable<any> {
-    return this.http.get(Constants.HOST + '/ussurioooo/getUssurioooo/')
-  }
+    return this.http.get(Constants.HOST + '/ussurioooo/getUssurioooo/').pipe(
+      map( value=>{
+    return value;
+      }),
+  catchError( err => {
+  throw err;
+  console.log(err);
+    })
+      );
+    }
 
   borrar(id:number):Observable<any> {
-    return this.http.get(Constants.HOST + '/ussurioooo/delete/'+id)
+    return this.http.delete(Constants.HOST + '/ussurioooo/delete/'+id).pipe(
+      map( value=>{
+    return value;
+      }),
+  catchError( err => {
+  throw err;
+  console.log(err);
+    })
+      );
+    }
   }
-}
+

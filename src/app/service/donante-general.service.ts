@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
+import {catchError, map, Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {Constants} from "../constants/constants";
-import { Usuarioo } from '../models/usuarioo';
-import { Estado } from '../models/estado';
+import { Donantegeneral } from '../models/donantegeneral';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +12,31 @@ export class DonanteGeneralService {
   // @ts-ignore
   constructor(private http: HttpClient) { }
 
-  getByUsuarioo(usuarioo: string):Observable<any> {
-    return this.http.get(Constants.HOST + '/donacionantegeneral/getByUsuarioo/' + usuarioo);
+  guardar(donante:Donantegeneral):Observable<any> {
+    return this.http.post(Constants.HOST + '/donante/save' , donante)
   }
 
-  getByEstado(estado: string):Observable<any> {
-    return this.http.get(Constants.HOST + '/donantegeneral/getByEstado' + Estado)
+  getDonante():Observable<any> {
+    return this.http.get(Constants.HOST + '/donante/getDonante/').pipe(
+      map(value => {
+        return value;
+      }),
+      catchError(err => {
+        throw err;
+        console.log(err);
+      })
+    );
+  }
+
+  borrar(id: number):Observable<any> {
+    return this.http.delete(Constants.HOST + '/donante/delete' + id).pipe(
+      map(value => {
+        return value;
+      }),
+      catchError(err => {
+        throw err;
+        console.log(err);
+      })
+    );
   }
 }
