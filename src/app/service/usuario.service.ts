@@ -12,7 +12,19 @@ export class UsuarioService {
 
   constructor(private http: HttpClient) { }
 
-  getByRol(rol: string):Observable<any> {
-    return this.http.get(Constants.HOST + '/usuario/getByRol/' + rol)
+  nuevo(ussurioooo:Ussurioooo):Observable<any> {
+    return this.http.post(Constants.HOST + '/ussurioooo/nuevo/' + ussurioooo)
+  }
+
+  getUssurioooos():Observable<any> {
+    return this.http.get(Constants.HOST + '/ussurioooo/getUssurioooos/')
+  }
+
+  getUssurioooo():Observable<any> {
+    return this.http.get(Constants.HOST + '/ussurioooo/getUssurioooo/')
+  }
+
+  borrar(id:number):Observable<any> {
+    return this.http.get(Constants.HOST + '/ussurioooo/delete/'+id)
   }
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {Constants} from "../constants/constants";
-import { Municipio } from '../models/municipio';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,15 @@ export class ColoniaService {
 
   constructor(private http: HttpClient) { }
 
-  getByMunicipio(municipio: string):Observable<any> {
-    return this.http.get(Constants.HOST + '/colonia/getByMunicipio' + Municipio)
+  guardar(colonia:Colonia):Observable<any> {
+    return this.http.post(Constants.HOST + '/colonia/save' + colonia)
+  }
+
+  getColonia():Observable<any> {
+    return this.http.get(Constants.HOST + 'colonia/getColonia')
+  }
+
+  delete(id:number):Observable<any> {
+    return this.http.get(Constants.HOST + '/colonia/delete' + id)
   }
 }
