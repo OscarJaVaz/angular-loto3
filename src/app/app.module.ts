@@ -1,6 +1,6 @@
 import {LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './cabecera/menu/menu.component';
@@ -38,7 +38,7 @@ import { GhorariosComponent } from './view/ghorarios/ghorarios.component';
 import { EEventoComponent } from './view/e-evento/e-evento.component';
 import { EActividadComponent } from './view/e-actividad/e-actividad.component';
 import { TarjetasComponent } from './cabecera/tarjetas/tarjetas.component';
-import {NgxSpinnerModule} from "ngx-spinner";
+
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AuthInterceptor} from "./interceptor/auth-interceptor.service";
 import {Token} from "./interceptor/token.service";
@@ -94,7 +94,7 @@ registerLocaleData(localES, 'mx');
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxSpinnerModule,
+    BrowserAnimationsModule,
     HttpClientModule, 
     NgxChartsModule
     

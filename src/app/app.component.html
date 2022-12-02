@@ -1,3 +1,16 @@
 <router-outlet></router-outlet>
 
-<ngx-spinner bdColor="rgba(98, 163, 232, 1)" color="rgba(14, 64, 116, 1)" type="ball-scale-multiple"></ngx-spinner>
+<ngx-charts-advanced-pie-chart
+  [view]="view"
+  scheme="nightLights"
+  [results]="single"
+  [gradient]="gradient"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  >
+</ngx-charts-advanced-pie-chart>
+
+<button (click)="onRandomData()">
+  Random Data
+</button>
