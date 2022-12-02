@@ -38,4 +38,8 @@ export class DonacionService {
       })
     );
   }
+
+  generatePdf(id: number): Observable<any> {
+    return this.http.get(Constants.HOST + '/donacion/generatePdf/' + id, {observe:'response',responseType: 'blob'})
+  }
 }

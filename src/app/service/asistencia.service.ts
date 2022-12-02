@@ -39,5 +39,9 @@ export class AsistenciaService {
       })
     );
   }
+
+  generatePdf(id_asistencia: number): Observable<any> {
+    return this.http.get(Constants.HOST + '/plan/generatePdf/' + id_asistencia, {observe:'response',responseType: 'blob'})
+  }
   
 }

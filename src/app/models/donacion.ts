@@ -1,5 +1,5 @@
 export class Donacion {
-    id_donante: number = 0;
+    id_donacion: number = 0;
     tipo_donacion:string ="";
     fecha_registro:string = "";
     stock: number=0;

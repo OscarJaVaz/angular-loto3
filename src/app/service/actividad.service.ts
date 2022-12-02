@@ -50,4 +50,8 @@ export class ActividadService {
       })
     );
   }
+  
+  generatePdf(id_actividad: number): Observable<any> {
+    return this.http.get(Constants.HOST + '/plan/generatePdf/' + id_actividad, {observe:'response',responseType: 'blob'})
+  }
 }
