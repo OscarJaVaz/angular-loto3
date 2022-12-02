@@ -17,19 +17,19 @@ export class InfogService {
   private data: info[]= [
     {
       "name": "Cliquearon la pag",
-      "value": Math.random() * 1000
+      "value": Math.random() * 100
     },
     {
       "name": "Cliquearon actividades",
-      "value": Math.random() * 1000
+      "value": Math.random() * 100
     },
     {
       "name": "Checaron testimoniales",
-      "value": Math.random() * 1000
+      "value": Math.random() * 100
     },
       {
       "name": "Checaron redes sociales",
-      "value": Math.random() * 1000
+      "value": Math.random() * 100
     }
   ];
 
@@ -41,19 +41,19 @@ export class InfogService {
     return this.data = [
       {
         "name": "Cliquearon la pag",
-        "value": Math.random() * 1000
+        "value": Math.random() * 100
       },
       {
         "name": "Cliquearon actividades",
-        "value": Math.random() * 1000
+        "value": Math.random() * 100
       },
       {
         "name": "Checaron testimoniales",
-        "value": Math.random() * 1000
+        "value": Math.random() * 100
       },
         {
         "name": "Checaron redes sociales",
-        "value": Math.random() * 1000
+        "value": Math.random() * 100
       }
     ];
   }
