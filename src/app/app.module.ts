@@ -45,6 +45,7 @@ import {Token} from "./interceptor/token.service";
 import {DatePipe, registerLocaleData} from "@angular/common";
 import localES from '@angular/common/locales/es-MX'
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { GraficaComponent } from './view/grafica/grafica.component';
 registerLocaleData(localES, 'mx');
 
 
@@ -88,6 +89,7 @@ registerLocaleData(localES, 'mx');
     EEventoComponent,
     EActividadComponent,
     TarjetasComponent,
+    GraficaComponent,
 
 
   ],

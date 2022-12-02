@@ -28,7 +28,7 @@ export class AppComponent {
 
 
 
-  constructor( private infogService: InfogService) { }
+  constructor( private infogService: InfogService) {}
 
   get single(){
     return this.infogService.infos;

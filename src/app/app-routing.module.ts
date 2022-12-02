@@ -33,6 +33,7 @@ import { IalumnosComponent } from './view/ialumnos/ialumnos.component';
 import { EEventoComponent } from './view/e-evento/e-evento.component';
 import { EActividadComponent } from './view/e-actividad/e-actividad.component';
 import { TarjetasComponent } from './cabecera/tarjetas/tarjetas.component';
+import { GraficaComponent } from './view/grafica/grafica.component';
 
 
 const routes: Routes = [
@@ -70,6 +71,7 @@ const routes: Routes = [
   {path: 'editarevent', component: EEventoComponent, data:{title: 'loto tres editar evento'}},
   {path: 'editaractividad', component: EActividadComponent, data:{title: 'Loto Tres editar actividad'}},
   {path: 'tarjetas', component: TarjetasComponent, data:{title: 'Loto Tres Tarjetas'}},
+  {path: 'graficas', component: GraficaComponent, data: {title: 'Loto Tres Grafica'}},
 ];
 
 @NgModule({
@@ -83,4 +85,4 @@ export const RoutingComponents = [HomeComponent, DonativosComponent, IsesionComp
   GalumnosComponent, GdonadoresComponent, GeventosComponent, CrearactComponent, CreardonComponent,
   CreareventComponent, InstructorComponent, IperfilComponent, IeditarComponent, IhorariosComponent,
   IregistrarseComponent, IactividadComponent, IalumnosComponent, GhorariosComponent, EEventoComponent,
-  EActividadComponent, TarjetasComponent];
+  EActividadComponent, TarjetasComponent, GraficaComponent];
