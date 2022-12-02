@@ -44,6 +44,7 @@ import {AuthInterceptor} from "./interceptor/auth-interceptor.service";
 import {Token} from "./interceptor/token.service";
 import {DatePipe, registerLocaleData} from "@angular/common";
 import localES from '@angular/common/locales/es-MX'
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 registerLocaleData(localES, 'mx');
 
 
@@ -94,7 +95,9 @@ registerLocaleData(localES, 'mx');
     BrowserModule,
     AppRoutingModule,
     NgxSpinnerModule,
-    HttpClientModule
+    HttpClientModule, 
+    NgxChartsModule
+    
   ],
   providers: [
     DatePipe,
