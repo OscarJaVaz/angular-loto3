@@ -9,6 +9,8 @@ import { Instructor } from '../models/instructor';
 })
 export class InstructorService {
 
+  private url: string= "http://localhost:8080//instructor/";
+
   constructor(private http: HttpClient) { }
 
   guardar(instructor:Instructor):Observable<any> {
