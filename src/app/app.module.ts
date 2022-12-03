@@ -47,12 +47,13 @@ import {DatePipe, registerLocaleData} from "@angular/common";
 import localES from '@angular/common/locales/es-MX'
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { GraficaComponent } from './view/grafica/grafica.component';
+import { PdfComponent } from './pdf/pdf.component';
 registerLocaleData(localES, 'mx');
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     MenuComponent,
     HomeComponent,
@@ -91,9 +92,8 @@ registerLocaleData(localES, 'mx');
     EActividadComponent,
     TarjetasComponent,
     GraficaComponent,
-
-
-  ],
+      PdfComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

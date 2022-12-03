@@ -1,0 +1,44 @@
+
+
+body{
+    position: relative;
+}
+
+
+
+.botones{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+    
+
+    border: 2px solid transparent;
+    background: #292c6d;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 25px;
+    box-shadow: 0 6px #ff0030;
+    transition: 0.25s;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+
+   
+  cursor: pointer;
+  box-shadow: 0 6px #ff0030;
+  transition: .3s;
+  }
+
+  .botones:active{
+      transform: translateY(5px);
+      box-shadow: 0 3px 0 #ff0030;
+      color: white;
+      background-color: #ca2828;
+    }
