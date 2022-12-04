@@ -24,22 +24,8 @@ export class GeventosComponent implements OnInit {
     );
   }
 
-  guardar() {
-    this.spinner.show().then(() => {
-      this.eventoService.guardar(this.evento).subscribe({
-        next: () => {
-          swal.fire('', 'Evento almacenado con éxito', 'success').then(() => {
-            this.router.navigate(['/home']).then(() => {});
-          });
-        },
-        complete: () => {
-          this.spinner.hide().then(() => {});
-        }
-      });
-    });
-  }
 
-  delete():void{
+  borrar():void{
     console.log("Hello form delete");
     this.eventoService.borrar(this.evento.id_evento).subscribe(
       res=>this.eventoService.getEvento().subscribe(

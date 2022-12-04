@@ -17,17 +17,6 @@ export class UsuarioService {
     return this.http.post(Constants.HOST + '/ussurioooo/nuevo/' , ussurioooo)
   }
 
-  getUssurioooos():Observable<any> {
-    return this.http.get(Constants.HOST + '/ussurioooo/getUssurioooos/').pipe(
-      map( value=>{
-    return value;
-      }),
-  catchError( err => {
-  throw err;
-  console.log(err);
-    })
-      );
-    }
  
 
   getUssurioooo():Observable<any> {
@@ -41,6 +30,19 @@ export class UsuarioService {
     })
       );
     }
+
+    getUssurioooos():Observable<any> {
+      return this.http.get(Constants.HOST + '/ussurioooo/getUssurioooos/').pipe(
+        map( value=>{
+      return value;
+        }),
+    catchError( err => {
+    throw err;
+    console.log(err);
+      })
+        );
+      }
+   
 
   borrar(id:number):Observable<any> {
     return this.http.delete(Constants.HOST + '/ussurioooo/delete/'+id).pipe(

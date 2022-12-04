@@ -2,9 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import swal from "sweetalert2";
 import {NgxSpinnerService} from "ngx-spinner";
-import {Router} from "@angular/router";
+import {Router,ActivatedRoute} from "@angular/router";
 import { Donacion } from 'src/app/models/donacion';
 import { DonacionService } from 'src/app/service/donacion.service';
+import { UsuarioService } from 'src/app/service/usuario.service';
+import { Usuarioo } from 'src/app/models/usuarioo';
+import {forkJoin} from "rxjs";
+
 
 @Component({
   selector: 'app-creardon',
@@ -13,26 +17,48 @@ import { DonacionService } from 'src/app/service/donacion.service';
 })
 export class CreardonComponent implements OnInit {
 
-  donacion: Donacion = new Donacion ();
+  public donacion: Donacion = new Donacion ();
+  public usuarioos: Usuarioo []=[];
+
 
   constructor(private title:Title,
     private donacionService:DonacionService,
+    private usuarioService:UsuarioService,
               private spinner: NgxSpinnerService,
               private router: Router) { }
 
   ngOnInit(): void {
     this.title.setTitle("Donativos");
-    this.donacionService.getDonacion().subscribe(
-      d => this.donacion =d
-    );
+    this.getData();
+    
   }
 
-  guardar() {
+
+  private getData() {
     this.spinner.show().then(() => {
-      this.donacionService.guardar(this.donacion).subscribe({
+      let usuarioosGet = this.usuarioService.getUssurioooo();
+      forkJoin([usuarioosGet]).subscribe({
+        next: response => {
+          this.usuarioos = response[0] as Usuarioo[];
+          
+          this.spinner.hide().then(() => {
+          });
+        },
+        complete: () => {
+          this.spinner.hide().then(() => {
+          });
+        }
+      });
+  });
+
+}
+
+  nuevo() {
+    this.spinner.show().then(() => {
+      this.donacionService.nuevo(this.donacion).subscribe({
         next: () => {
           swal.fire('', 'Donacion almacenada con éxito', 'success').then(() => {
-            this.router.navigate(['/home']).then(() => {});
+            this.router.navigate(['/gdonadores']).then(() => {});
           });
         },
         complete: () => {

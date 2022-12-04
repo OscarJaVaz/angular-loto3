@@ -18,9 +18,6 @@ export class CreareventComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.eventoService.getEvento().subscribe(
-      e => this.evento =e
-    );
   }
 
   guardar() {
@@ -28,7 +25,7 @@ export class CreareventComponent implements OnInit {
       this.eventoService.guardar(this.evento).subscribe({
         next: () => {
           swal.fire('', 'Evento almacenado con éxito', 'success').then(() => {
-            this.router.navigate(['/home']).then(() => {});
+            this.router.navigate(['/geventos']).then(() => {});
           });
         },
         complete: () => {

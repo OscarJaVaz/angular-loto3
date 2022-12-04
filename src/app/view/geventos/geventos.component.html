@@ -43,14 +43,12 @@
       <table>
         <thead>
           <tr>
-            <th>Nombre del evento</th>
             <th>Descripcion </th>
-            <th>Instrucciones</th>
-            <th>Ubicacion</th>
-            <th>Imagen</th>
             <th>Fecha</th>
+            <th>Ubicacion</th>
             <th>Url</th>
-            <th>Acciones</th>
+            <th>Imagen</th>
+            <th>Instrucciones</th>
           </tr>
         </thead>
         <tbody>
@@ -116,15 +114,19 @@
             
             <td>
               <button class="btn" [routerLink]="['/editarevent']">Editar evento</button>
-              <button class="btn btn-delete">Eliminar evento</button>
+              <button class="btn btn-delete"  (click)="borrar()">Eliminar evento</button>
             </td>
           </tr>
           
           
         </tbody>
+
+
+ 
+           
       </table>
     </main>
     
   </div>
-  
+
 </div>

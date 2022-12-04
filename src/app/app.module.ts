@@ -38,7 +38,7 @@ import { GhorariosComponent } from './view/ghorarios/ghorarios.component';
 import { EEventoComponent } from './view/e-evento/e-evento.component';
 import { EActividadComponent } from './view/e-actividad/e-actividad.component';
 import { TarjetasComponent } from './cabecera/tarjetas/tarjetas.component';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule , ReactiveFormsModule }   from '@angular/forms';
 import {NgxSpinnerModule} from "ngx-spinner";
 
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
@@ -102,8 +102,8 @@ registerLocaleData(localES, 'mx');
     HttpClientModule, 
     NgxChartsModule,
     NgxSpinnerModule,
-    FormsModule
-    
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     DatePipe,

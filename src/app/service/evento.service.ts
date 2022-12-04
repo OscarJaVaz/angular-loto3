@@ -13,7 +13,7 @@ export class EventoService {
   constructor(private http: HttpClient) { }
 
   guardar(evento:Evento):Observable<any> {
-    return this.http.post(Constants.HOST + '/evento/save' , evento)
+    return this.http.post(Constants.HOST + '/evento/nuevo' , evento)
   }
 
   getEvento():Observable<any> {

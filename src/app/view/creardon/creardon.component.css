@@ -508,6 +508,17 @@ html {
     
    
   }
+
+
+  [type='boolean']:focus {
+    outline: none;
+    border-color: #0e1887;
+  }
+
+  [option='number']:focus {
+    outline: none;
+    border-color: #0e1887;
+  }
   
   
   

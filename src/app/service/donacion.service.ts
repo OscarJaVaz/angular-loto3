@@ -11,8 +11,8 @@ export class DonacionService {
 
   constructor(private http: HttpClient) { }
 
-  guardar(donacion:Donacion ):Observable<any> {
-    return this.http.post(Constants.HOST + '/donacion/save' , donacion)
+  nuevo(donacion:Donacion ):Observable<any> {
+    return this.http.post(Constants.HOST + '/donacion/nuevo' , donacion)
   }
 
   getDonacion():Observable<any> {

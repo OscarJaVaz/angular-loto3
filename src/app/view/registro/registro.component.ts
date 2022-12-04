@@ -21,9 +21,7 @@ export class RegistroComponent implements OnInit {
 
   ngOnInit(): void {
     this.title.setTitle("Registrarse");
-    this.usuarioService.getUssurioooo().subscribe(
-      u => this.usuarioo =u
-    );
+    
   }
 
   guardar() {

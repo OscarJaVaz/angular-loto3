@@ -37,11 +37,9 @@
   <div class='signup'>
 	
      <form>
-       <input type='text' placeholder='Nombre del evento: '  />
-       <input type='text' placeholder='Descripcion: '  />
-       <input type='date' placeholder='Fecha: '  />
-       
-       
+       <input type='text' class="form-control"placeholder='Descripcion: '  required="requiered" name="descripcion" id="descripcion" [(ngModel)]="evento.descripcion"/>
+       <input type='date' class="form-control"placeholder='Fecha: ' required="requiered" name="fecha" id="fecha" [(ngModel)]="evento.fecha" />
+       <input type='text' class="form-control" placeholder='Ubicacion: ' required="requiered" name="ubicacion" id="ubicacion" [(ngModel)]="evento.ubicacion"  />
       
         </form>
 
@@ -49,12 +47,13 @@
   
   <div class="lado">
 	<form >
-        <input type='text' placeholder='Url: '  />
-        <input type='text' placeholder='Ubicacion: '  />
-        <input type='text' placeholder='Imagen: '  />
+        <input type='text' class="form-control" placeholder='Url: ' required="requiered" name="url" id="url" [(ngModel)]="evento.url"  />
+        <input type='text' class="form-control" placeholder='Imagen: ' required="requiered" name="imagen" id="imagen" [(ngModel)]="evento.imagen" />
+	      <input type='text' class="form-control" placeholder='Instrucciones: ' required="requiered" name="instrucciones" id="instrucciones" [(ngModel)]="evento.instrucciones" />
+        <input type='text' class="form-control" placeholder='Ingresa tu id : ' required="requiered" name="id_usuario" id="id_usuario"[(ngModel)]="evento.id_usuario" />
+
 	
-	
-	<input type='submit' [routerLink]="['/geventos']" placeholder='Actualizar' />
+	<input type='submit' placeholder='Actualizar' (click)="guardar()" />
 </form>
   </div>
   
