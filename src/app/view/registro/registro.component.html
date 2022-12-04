@@ -15,8 +15,8 @@
 	<ul>
 		<li><a [routerLink]="['/home']">Inicio</a></li>
 		<li><a [routerLink]="['/isesion']">Iniciar sesi&oacute;n</a></li>
-		
-		
+
+
 	</ul>
 </nav>
 
@@ -26,41 +26,42 @@
 		<h1><i class="fa fa-picture-o" aria-hidden="true"></i></h1>
 	</header>
 	<section>
-		
+
 <div id='container'>
 	<div class='whysign'>
     <h1>Registrarse</h1>
-     
+
   </div>
   <div class='signup'>
-	
+
      <form>
    <input type='text' class="form-control" placeholder='Nombre(s):' required="requiered" name="nombre" id="nombre" [(ngModel)]="usuarioo.nombre" >
-	<input type='text' class="form-control" placeholder='Apellidos:' required="requiered" name="apellidos " id="apellido" [(ngModel)]="usuarioo.apellido" /> 
-    
+	<input type='text' class="form-control" placeholder='Apellidos:' required="requiered" name="apellidos " id="apellido" [(ngModel)]="usuarioo.apellido" />
+	<input type='number' class="form-control" placeholder='Edad:' required="requiered" name="edad" id="edad" [(ngModel)]="usuarioo.apellido" />
+
 	<input type='email'  class="form-control" placeholder='Correo electronico:' required="requiered" name="correo" id="correo"  [(ngModel)]="usuarioo.correo" />
 	<input type='number'  class="form-control" placeholder='Numero de celular:' required="requiered" name="telefono" id="telefono" [(ngModel)]="usuarioo.telefono" />
         </form>
 
   </div>
-  
+
   <div class="lado">
 	<form >
 	<input type='date' class="form-control" placeholder='Fecha de nacimiento:'required="requiered" name="fecha_creaci" id="fecha_creaci" [(ngModel)]="usuarioo.fecha_creaci"  />
 	<input type='password'  class="form-control" placeholder='Contraseña:' required="requiered" name="contrasena" id="contrasena" [(ngModel)]="usuarioo.contrasena" />
 <input type='password'  class="form-control" placeholder='Confirma tu contraseña:'  />
-	
+
 	<input type='submit' placeholder='SUBMIT' (click)="guardar()"/>
 </form>
   </div>
-  
+
 </div>
 
 	</section>
 	<div class="img">
 		<h1><i class="fa fa-picture-o" aria-hidden="true"></i></h1>
 	</div>
-	
+<!--
 	<footer>
 		<div class="logo">
 			<i class="fa fa-picture-o" aria-hidden="true"></i>
@@ -73,21 +74,21 @@
 			<li><a [routerLink]="['/campaña']">Campaña</a></li>
 		</ul>
 		<div class="secondary-links">
-			
 
-			
+
+
 
 			<a href="https://www.facebook.com/fundacionlototresac" target="_blank"><img loading="lazy" alt="Sígueme en Facebook" height="35" width="35" src=" https://1.bp.blogspot.com/-Pop-U7OywXs/YPhkfrImyiI/AAAAAAAAA1Y/UBnVfTK9j2U-bIUqwZYMNSQPvz_l06mbwCPcBGAYYCw/s0/facebook-icono.png" title="Sígueme en Facebook"/></a>
-			
+
 			<a href="https://www.youtube.com/channel/UC1Eg93TeFfm2BLNo4gwNGQw" target="_blank"><img loading="lazy" alt="Sígueme en YouTube" height="35" width="35" src=" https://1.bp.blogspot.com/-0Ao8V_ZtT5Q/YPhkfO0JqkI/AAAAAAAAA1U/Sz5GlaSW78AsY3nZpcqeIoPA_HQUSCVLgCPcBGAYYCw/s0/Youtube-icono.png" title=" Sígueme en YouTube "/></a>
-			
+
 			<a href="https://www.instagram.com/fundacionlototresac/" target="_blank"><img loading="lazy" alt="Sígueme en Instagram" height="35" width="35" src="https://1.bp.blogspot.com/-VFfOISywV0c/YPhkeRXuRQI/AAAAAAAAA1M/L75S9Usg5AovunH2Y-VzqJbaaY1LuK3eACPcBGAYYCw/s0/Instagram-icono.png" title="Sígueme en Instagram"/></a>
 
 			<a href="https://twitter.com/LotoTres" target="_blank"><img loading="lazy" alt=" Sígueme en Twitter" height="35" width="35" src=" https://1.bp.blogspot.com/-2JwTJZxg1AU/YPhkfB0DdjI/AAAAAAAAA1c/tDKdU6tS0A0lt4YegGUVd7k-9hguYz82ACPcBGAYYCw/s0/Twitter-icono.png" title="Sígueme en Twitter"/></a>
 
-		
+
 	</div>
-	</footer>
+	</footer> -->
 </main>
 
 

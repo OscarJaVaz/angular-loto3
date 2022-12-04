@@ -19,7 +19,7 @@ export class CreardonComponent implements OnInit {
 
   public donacion: Donacion = new Donacion ();
   public usuarioos: Usuarioo []=[];
-
+  public data:any = "";
 
   constructor(private title:Title,
     private donacionService:DonacionService,
@@ -29,18 +29,23 @@ export class CreardonComponent implements OnInit {
 
   ngOnInit(): void {
     this.title.setTitle("Donativos");
-    this.getData();
-    
+    this.datos();
   }
 
+datos(){
+ let usuarios = this.usuarioService.getUssurioooos();
+ forkJoin([usuarios]).subscribe(res =>{
+   this.usuarioos = res[0] as Usuarioo[];
+ })
+}
 
   private getData() {
     this.spinner.show().then(() => {
-      let usuarioosGet = this.usuarioService.getUssurioooo();
+      let usuarioosGet = this.usuarioService.getUssurioooos();
       forkJoin([usuarioosGet]).subscribe({
         next: response => {
           this.usuarioos = response[0] as Usuarioo[];
-          
+
           this.spinner.hide().then(() => {
           });
         },
@@ -55,6 +60,9 @@ export class CreardonComponent implements OnInit {
 
   nuevo() {
     this.spinner.show().then(() => {
+      let usuario: Usuarioo = new Usuarioo();
+      usuario.id_usuario = this.data;
+      this.donacion.usuario = usuario;
       this.donacionService.nuevo(this.donacion).subscribe({
         next: () => {
           swal.fire('', 'Donacion almacenada con éxito', 'success').then(() => {

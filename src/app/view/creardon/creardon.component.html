@@ -11,7 +11,7 @@
      <span></span>
      <span></span>
  </label>
- 
+
  <nav class="nav">
      <ul>
          <li><a [routerLink]="['/admin']">Panel de control</a></li>
@@ -28,24 +28,24 @@
 		<h1><i class="fa fa-picture-o" aria-hidden="true"></i></h1>
 	</header>
 	<section>
-		
+
 <div id='container'>
 	<div class='whysign'>
     <h1>Agregar nueva donacion</h1>
-     
+
   </div>
   <div class='signup'>
-	
+
      <form>
        <input type='text' class="form-control" placeholder='Tipo de donacion: ' required="requiered" name="tipo_donacion" id="tipo_donacion" [(ngModel)]="donacion.tipo_donacion"  />
        <input type='date' class="form-control" placeholder='Fecha de registro: ' required="requiered" name="fecha_registro" id="fecha_registro" [(ngModel)]="donacion.fecha_registro" />
-       
-       
-      
+
+
+
         </form>
 
   </div>
-  
+
   <div class="lado">
 	<form >
         <input type='number' class="form-control" placeholder='Stock: ' required="requiered" name="stock" id="stock" [(ngModel)]="donacion.stock"  />
@@ -53,26 +53,26 @@
         <input type='boolean' class="form-control" placeholder='Validado: ' required="requiered" name="validado" id="validado" [(ngModel)]="donacion.validado" />
         <input type='number' class="form-control" placeholder='Status: ' required="requiered" name="status" id="status" [(ngModel)]="donacion.status" />
         <input type='text' value="0" class="form-control" placeholder='Escriba el nombre de un Usuario: ' />
-        <select class="form-control" required="required"  name="usuarioo" id="usuarioo" [(ngModel)]="donacion.usuarioo.id_usuario">
+        <select class="form-control" required="required"  name="usuarioo" id="usuarioo" [(ngModel)]="data">
           <option  class="obscuro">Seleccione un Usuario</option>
           <option class="obscuro" *ngFor="let usuarioo of usuarioos" [value]="usuarioo.id_usuario">{{usuarioo.nombre}}</option>
         </select>
 
- 
-	 
-	
+
+
+
 	<input type='submit' placeholder='Actualizar' (click)="nuevo()" />
 </form>
   </div>
-  
+
 </div>
 
 	</section>
 	<div class="img">
 		<h1><i class="fa fa-picture-o" aria-hidden="true"></i></h1>
 	</div>
-	
-	
+
+
 </main>
 
 
