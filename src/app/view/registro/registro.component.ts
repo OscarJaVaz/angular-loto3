@@ -43,7 +43,7 @@ export class RegistroComponent implements OnInit {
   delete(usuarioo:Usuarioo):void{
     console.log("Hello form delete");
     this.usuarioService.borrar(usuarioo.id_usuario).subscribe(
-      res=>this.usuarioService.getUssurioooo().subscribe(
+      res=>this.usuarioService.getUser().subscribe(
         Response=>usuarioo=Response
       )
     );

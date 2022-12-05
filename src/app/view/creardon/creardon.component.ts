@@ -34,11 +34,11 @@ export class CreardonComponent implements OnInit {
   }
 
 
-  private getData() {
-    this.spinner.show().then(() => {
-      let usuarioosGet = this.usuarioService.getUssurioooo();
-      forkJoin([usuarioosGet]).subscribe({
-        next: response => {
+ // private getData() {
+    //this.spinner.show().then(() => {
+     // let usuarioosGet = this.usuarioService.getUser();
+     // forkJoin([usuarioosGet]).subscribe({
+      /*  next: response => {
           this.usuarioos = response[0] as Usuarioo[];
           
           this.spinner.hide().then(() => {
@@ -51,6 +51,19 @@ export class CreardonComponent implements OnInit {
       });
   });
 
+}*/
+
+private getData() {
+  this.spinner.show().then(() => {
+    this.usuarioService.getUser().subscribe({
+      next: value => {
+        this.usuarioos = value as Usuarioo[];
+      },
+      complete: () => {
+        this.spinner.hide().then(() => {});
+      }
+    });
+  });
 }
 
   nuevo() {

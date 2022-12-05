@@ -19,8 +19,8 @@ export class UsuarioService {
 
  
 
-  getUssurioooo():Observable<any> {
-    return this.http.get(Constants.HOST + '/ussurioooo/getUssurioooo/').pipe(
+  getUser():Observable<any> {
+    return this.http.get(Constants.HOST + '/ussurioooo/getUser/').pipe(
       map( value=>{
     return value;
       }),
