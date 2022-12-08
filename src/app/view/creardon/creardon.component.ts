@@ -7,7 +7,7 @@ import { Donacion } from 'src/app/models/donacion';
 import { DonacionService } from 'src/app/service/donacion.service';
 import { UsuarioService } from 'src/app/service/usuario.service';
 import { Usuarioo } from 'src/app/models/usuarioo';
-import {forkJoin, observable, pipe} from "rxjs";
+import {forkJoin, observable, observeOn, pipe} from "rxjs";
 
 
 @Component({
@@ -19,6 +19,7 @@ export class CreardonComponent implements OnInit {
 
   public donacion: Donacion = new Donacion ();
   public usuarioos: Usuarioo []=[];
+  data:any="";
 
 
   constructor(private title:Title,
@@ -37,7 +38,7 @@ export class CreardonComponent implements OnInit {
 
   private getData() {
     this.spinner.show().then(() => {
-      let usuarioosGet = this.usuarioService.getUssurioooo();
+      let usuarioosGet = this.usuarioService.getUser();
       forkJoin([usuarioosGet]).subscribe({
        next: response => {
           this.usuarioos = response[0] as Usuarioo[];
@@ -72,6 +73,9 @@ export class CreardonComponent implements OnInit {
 
   nuevo() {
     this.spinner.show().then(() => {
+      let usuario:Usuarioo = new    Usuarioo();
+      usuario.id_usuario = this.data;
+      this.donacion,usuario=usuario;
       this.donacionService.nuevo(this.donacion).subscribe({
         next: () => {
           swal.fire('', 'Donacion almacenada con éxito', 'success').then(() => {
