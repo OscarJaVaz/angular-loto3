@@ -1,4 +1,4 @@
-import { Usuarioo } from "./usuarioo";
+import {Usuarioo} from "./usuarioo";
 
 export class Donacion {
     id_donacion: number = 0;
@@ -8,8 +8,5 @@ export class Donacion {
     fecha_act: string = "";
     validado: boolean= true;
     status: string="";
-    usuario: Usuarioo=new Usuarioo();
-    usuarioo: Usuarioo = new Usuarioo();
-    
-   
+    usuario: Usuarioo= new Usuarioo();
 }

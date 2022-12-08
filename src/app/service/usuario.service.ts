@@ -17,7 +17,7 @@ export class UsuarioService {
     return this.http.post(Constants.HOST + '/ussurioooo/nuevo/' , ussurioooo)
   }
 
- 
+
 
   getUser():Observable<any> {
     return this.http.get(Constants.HOST + '/user/getUser/').pipe(
@@ -32,7 +32,7 @@ export class UsuarioService {
     }
 
     getUssurioooos():Observable<any> {
-      return this.http.get(Constants.HOST + '/ussurioooo/getUssurioooos/').pipe(
+      return this.http.get(Constants.HOST + '/user/getUser').pipe(
         map( value=>{
       return value;
         }),
@@ -42,7 +42,7 @@ export class UsuarioService {
       })
         );
       }
-   
+
 
   borrar(id:number):Observable<any> {
     return this.http.delete(Constants.HOST + '/ussurioooo/delete/'+id).pipe(
