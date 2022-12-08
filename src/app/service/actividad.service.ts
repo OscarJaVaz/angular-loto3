@@ -42,8 +42,21 @@ export class ActividadService {
   /*delete (id:number):Observable<any> {
     return this.http.delete(Constants.HOST + '/actividad/delete' + id )
   }*/
-  delete (id_actividad:number):Observable<any> {
+ /* delete (id_actividad:number):Observable<any> {
     return this.http.delete(Constants.HOST + '/actividad/delete' + id_actividad ).pipe(
+      map(value => {
+        return value;
+      }),
+      catchError(err => {
+        throw err;
+        console.log(err);
+      })
+    );
+  }*/
+
+  /*ELIMINAR BY OSCAR*/
+  delete(id_actividad): Observable<any>{
+    return this.http.delete(Constants.HOST + '/actividad/delete' + id_actividad).pipe(
       map(value => {
         return value;
       }),

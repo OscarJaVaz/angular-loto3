@@ -5,8 +5,6 @@ import {Router,ActivatedRoute} from "@angular/router";
 import { ActividadService } from 'src/app/service/actividad.service';
 import {forkJoin, observable, pipe} from "rxjs";
 import swal from "sweetalert2";
-import { nextTick } from 'process';
-import Swal from 'sweetalert2';
 
 
 @Component({
@@ -22,7 +20,8 @@ export class GactividadComponent implements OnInit {
   constructor(private spinner: NgxSpinnerService,
     private actividadService: ActividadService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    
   
     ) { }
 
@@ -49,7 +48,7 @@ export class GactividadComponent implements OnInit {
 
 }
 
-delete(id_actividad:number){
+/*delete(id_actividad:number){
   this.actividadService.delete(id_actividad).subscribe(  res =>{
    const swalButton = swal.mixin({
       customClass:{
@@ -76,8 +75,22 @@ delete(id_actividad:number){
     }
   });
   
-}
+}*/
 
+
+/*ELIMINAR BY OSCAR*/
+
+delete(id_actividad){
+  if(confirm('Seguro que desea eliminar')){
+    this.actividadService.delete(id_actividad).subscribe((getData)=>{
+      this.getData();
+    }, (error)=>{
+      console.log(error);
+    }
+    )
+  }
+
+}
 /*public delete(id_actividad:number){
   this.actividadService.delete(id_actividad).subscribe (()=>{
     this.actividadService.getActividades()
