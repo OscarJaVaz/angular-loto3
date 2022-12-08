@@ -48,6 +48,7 @@ export class GactividadComponent implements OnInit {
 
 }
 
+/*DELETE ALEJANDRA*/ 
 /*delete(id_actividad:number){
   this.actividadService.delete(id_actividad).subscribe(  res =>{
    const swalButton = swal.mixin({
@@ -78,9 +79,9 @@ export class GactividadComponent implements OnInit {
 }*/
 
 
-/*ELIMINAR BY OSCAR*/
 
-delete(id_actividad){
+
+/*delete(id_actividad){
   if(confirm('Seguro que desea eliminar')){
     this.actividadService.delete(id_actividad).subscribe((getData)=>{
       this.getData();
@@ -90,7 +91,25 @@ delete(id_actividad){
     )
   }
 
+}*/
+
+/*ELIMINAR BY OSCAR*/
+delete(id_actividad) {
+  this.spinner.show().then(() => {
+    this.actividadService.delete(id_actividad).subscribe({
+      next: () => {
+        swal.fire('', 'Actividad eliminada con éxito', 'success').then(() => {
+          this.router.navigate(['/gactividad']).then(() => {});
+        });
+      },
+      complete: () => {
+        this.spinner.hide().then(() => {});
+      }
+    });
+  });
 }
+
+
 /*public delete(id_actividad:number){
   this.actividadService.delete(id_actividad).subscribe (()=>{
     this.actividadService.getActividades()
