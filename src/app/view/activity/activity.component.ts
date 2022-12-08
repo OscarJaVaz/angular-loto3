@@ -43,7 +43,7 @@ export class ActivityComponent implements OnInit {
   
     delete(actividad:Actividad):void{
       console.log("Hello form delete");
-      this.actividadservice.borrar(actividad.id_actividad).subscribe(
+      this.actividadservice.delete(actividad.id_actividad).subscribe(
         res=>this.actividadservice.getActividad().subscribe(
           Response=>actividad=Response
         )

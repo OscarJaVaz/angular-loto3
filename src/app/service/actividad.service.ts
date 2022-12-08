@@ -39,19 +39,22 @@ export class ActividadService {
     );
   }
 
-  borrar (id:number):Observable<any> {
-    return this.http.delete(Constants.HOST + '/archivo/delete' + id ) .pipe (
-      map (value=> {
+  /*delete (id:number):Observable<any> {
+    return this.http.delete(Constants.HOST + '/actividad/delete' + id )
+  }*/
+  delete (id_actividad:number):Observable<any> {
+    return this.http.delete(Constants.HOST + '/actividad/delete' + id_actividad ).pipe(
+      map(value => {
         return value;
       }),
-     catchError (err=> {
+      catchError(err => {
         throw err;
         console.log(err);
       })
     );
   }
   
-  generatePdf(id_actividad: number): Observable<any> {
+  /*generatePdf(id_actividad: number): Observable<any> {
     return this.http.get(Constants.HOST + '/plan/generatePdf/' + id_actividad, {observe:'response',responseType: 'blob'})
-  }
+  }*/
 }

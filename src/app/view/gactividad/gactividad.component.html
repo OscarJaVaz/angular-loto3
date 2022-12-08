@@ -50,10 +50,15 @@
         </thead>
         
         <tbody>
-          <tr *ngFor="let actividad of actividades">
+          <tr *ngFor="let actividad of actividades"  >
             <td >{{actividad.nombre}}</td>
             <td >{{actividad.horario}}</td>
             <td >{{actividad.cupo}}</td>
+
+
+            <input type='submit' placeholder='Eliminar' (click)="delete(actividad.id_actividad)" />
+
+
 
           </tr>
         </tbody>

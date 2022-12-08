@@ -27,7 +27,7 @@ export class PdfComponent implements OnInit {
     
   }
 
-  private getData() {
+  /*private getData() {
     this.spinner.show().then(() => {
       let donacionesGet = this.donacionService.getDonacion();
       forkJoin([donacionesGet]).subscribe({
@@ -44,46 +44,27 @@ export class PdfComponent implements OnInit {
       });
   });
 
-}
+}*/
 
   //EJEMPLO
 
   createPDF(){
     
-    this.getData();
-
-    const pdfDefinition: any = {
-
-      content: [
-        
-        {text: 'Reporte de donaciones', style: 'header'},
-        
-		'---------------------------------------------------------------------------------------------------------------------',
-    
-    {
+    this.spinner.show().then(() => {
+      let donacionesGet = this.donacionService.getDonacion();
+      forkJoin([donacionesGet]).subscribe({
+       next: response => {
+          this.donaciones = response[0] as Donacion[];
           
-          table: {
-            headerRows: 1,
-            body: [
-              [{text: 'Tipo de donacion', style: 'tableHeader'}, {text: 'Numero de telefono', style: 'tableHeader'}, {text: 'Observaciones', style: 'tableHeader'}, {text: 'Proviene de', style: 'tableHeader'}],
-              ['ejemplo1', 'ejemplo1', 'ejemplo1', 'ejemplo1'],
-              ['ejemplo2', 'ejemplo2', 'ejemplo2', 'ejemplo2'],
-              ['ejemplo3', 'ejemplo3', 'ejemplo3', 'ejemplo3'],
-              ['ejemplo4', 'ejemplo4', 'ejemplo4', 'ejemplo4'],
-              ['ejemplo5', 'ejemplo5', 'ejemplo5', 'ejemplo5'],
-            ]
-          },
-          layout: 'lightHorizontalLines'
+          this.spinner.hide().then(() => {
+          });
         },
-        '---------------------------------------------------------------------------------------------------------------------'
-      ]
-    }
-
-
-    const pdf = pdfMake.createPdf(pdfDefinition);
-
-    pdf.open();
-
+        complete: () => {
+          this.spinner.hide().then(() => {
+          });
+        }
+      });
+  });
   }
 
 
