@@ -4,6 +4,9 @@ import {NgxSpinnerService} from "ngx-spinner";
 import {Router} from "@angular/router";
 import { Donantegeneral } from 'src/app/models/donantegeneral';
 import { DonanteGeneralService } from 'src/app/service/donante-general.service';
+import { Donacion } from 'src/app/models/donacion';
+import { DonacionService } from 'src/app/service/donacion.service';
+import {forkJoin, observable, pipe} from "rxjs";
 
 
 @Component({
@@ -12,21 +15,39 @@ import { DonanteGeneralService } from 'src/app/service/donante-general.service';
   styleUrls: ['./gdonadores.component.css']
 })
 export class GdonadoresComponent implements OnInit {
+  public donaciones: Donacion []=[];
 
   donantegeneral:Donantegeneral =new Donantegeneral ();
 
-  constructor(private donantegeneralService: DonanteGeneralService,
+  constructor(private donacionService: DonacionService,
               private spinner: NgxSpinnerService,
               private router: Router) { }
    
 
   ngOnInit(): void {
-    this.donantegeneralService.getDonante().subscribe(
-     d => this.donantegeneral = d
-   );
+    this.getData();
   }
+
+  private getData() {
+    this.spinner.show().then(() => {
+      let donacionesGet = this.donacionService.getDonacion();
+      forkJoin([donacionesGet]).subscribe({
+       next: response => {
+          this.donaciones = response[0] as Donacion[];
+          
+          this.spinner.hide().then(() => {
+          });
+        },
+        complete: () => {
+          this.spinner.hide().then(() => {
+          });
+        }
+      });
+  });
+
+}
   
-  guardar() {
+  /*guardar() {
     this.spinner.show().then(() => {
       this.donantegeneralService.guardar(this.donantegeneral).subscribe({
         next: () => {
@@ -49,7 +70,7 @@ export class GdonadoresComponent implements OnInit {
         Response=>donantegeneral=Response
       )
     );
-  }
+  }*/
 
   generatePdf() {
   }

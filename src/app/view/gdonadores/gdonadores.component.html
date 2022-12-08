@@ -44,54 +44,23 @@
         <thead>
           <tr>
             <th>Tipo de donacion</th>
-            <th>Numero de telefono </th>
-            <th>Observaciones</th>
-            <th>Proviene de</th>
-            <th>Acciones</th>
+            <th>Fecha de Regitro </th>
+            <th>Stock</th>
+            <th>Fecha Actual</th>
+            <th>Validado</th>
+            <th>Status</th>
+             
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <a >Donacion de inmuebles</a>
-            </td>
-            <td>5555555555</td>
-            <td>Ninguna</td>
-            
-            
-            <td>Fundacion Wallbert</td>
-            <td><button class="btn btn-delete">Eliminar donacion</button></td>
-          </tr>
-          <tr>
-            <td>
-              <a >Donacion en especie</a>
-            </td>
-            <td>5629291038</td>
-            <td>Ninguna</td>
-            
-            <td>Organizacion Ayuda a la Comunidad</td>
-            <td><button class="btn btn-delete">Eliminar donacion</button></td>
-          </tr>
-          <tr>
-            <td>
-              <a>Donacion recurrente</a>
-            </td>
-            <td>5619019251</td>
-            <td>Se hara donacion cada mes</td>
-            
-            <td>Persona fisica</td>
-            
-            <td><button class="btn btn-delete">Eliminar donacion</button></td>
-          </tr>
-          <tr>
-            <td>
-              <a>Donacion en especie</a>
-            </td>
-            <td>559282409</td>
-            <td>Ninguna</td>
-            
-            <td>Fundacion Uttec</td>
-            <td><button class="btn btn-delete">Eliminar donacion</button></td>
+          <tr *ngFor="let donacion of donaciones">
+            <td >{{donacion.tipo_donacion}}</td>
+            <td >{{donacion.fecha_registro}}</td>
+            <td >{{donacion.stock}}</td>
+            <td >{{donacion.fecha_act}}</td>
+            <td >{{donacion.validado}}</td>
+            <td >{{donacion.status}}</td>
+          
           </tr>
         </tbody>
       </table>

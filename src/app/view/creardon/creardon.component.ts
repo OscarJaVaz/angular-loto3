@@ -7,7 +7,7 @@ import { Donacion } from 'src/app/models/donacion';
 import { DonacionService } from 'src/app/service/donacion.service';
 import { UsuarioService } from 'src/app/service/usuario.service';
 import { Usuarioo } from 'src/app/models/usuarioo';
-import {forkJoin, observable, observeOn, pipe} from "rxjs";
+import {forkJoin, observable, pipe} from "rxjs";
 
 
 @Component({
