@@ -52,70 +52,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <a>Conferencia</a>
-            </td>
-            <td class="desc">Conferencia dirigida al publico
-                en general acerca de los beneficios de realizar
-                actividades dentro de la fundacion
-            </td>
-            <td>- Llegar 10 minutos antes
-                
-            </td>
-            <td>Paseo del Alheli Mz611 Lt 3 Col Ojo de Agua</td>
-            <td><img src="https://scontent.fmex16-1.fna.fbcdn.net/v/t1.6435-9/35654414_2555336401187379_1286369836460408832_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=JKMAwi4qytwAX8R8xim&tn=DsdKLeEA5sLU-sax&_nc_ht=scontent.fmex16-1.fna&oh=00_AfCJXk87h3RlbkywPBEWIBw5BtTuz9m38VQp-7Ojs_sphA&oe=639A2F92"></td>
-            <td>12/12/22</td>
-            <td>http://ejemplo.com</td>
-            
-            
-            <td>
-              <button class="btn" [routerLink]="['/editarevent']">Editar evento</button>
-              <button class="btn btn-delete">Eliminar evento</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a>Convivio Fin de Año</a>
-            </td>
-            <td class="desc">Se le invita a toda la comunidad a 
-                asistir al convivio que se llevara a acabo en la Fundacion
-            </td>
-            <td> Llegar 10 minutos antes, traer ropa comoda
-                
-            </td>
-            <td>Paseo del Alheli Mz611 Lt 3 Col Ojo de Agua</td>
-            <td><img src="https://scontent.fmex16-1.fna.fbcdn.net/v/t1.18169-9/1898144_911965488857820_7175531759940265169_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=uzAEEOrKWBQAX-7qx6H&tn=DsdKLeEA5sLU-sax&_nc_ht=scontent.fmex16-1.fna&oh=00_AfChBbs0BQuWzPxumQfrYNB7unhKw_En4E_wTB87EtgQkw&oe=639A5586"></td>
-            <td>12/12/22</td>
-            <td>http://ejemplo.com</td>
-            
-            
-            <td>
-              <button class="btn" [routerLink]="['/editarevent']">Editar evento</button>
-              <button class="btn btn-delete">Eliminar evento</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a>Venta de articulos</a>
-            </td>
-            <td class="desc">Se le invita a toda la comunidad
-                a asistir a la venta de articulos artesanales
-                que habra en la Fundacion Loto Tres
-            </td>
-            <td>- Llegar 10 minutos antes
-                
-            </td>
-            <td>Paseo del Alheli Mz611 Lt 3 Col Ojo de Agua</td>
-            <td><img src="https://scontent.fmex16-1.fna.fbcdn.net/v/t1.6435-9/35484269_2555336107854075_6514452115052560384_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=dGS-aXYxa50AX9w94IN&_nc_ht=scontent.fmex16-1.fna&oh=00_AfCZO5YcAH18qSbXXijsuH8dzoAteg6vsNmIQgy4ML4Pww&oe=639A3F45"></td>
-            <td>12/12/22</td>
-            <td>http://ejemplo.com</td>
-            
-            
-            <td>
-              <button class="btn" [routerLink]="['/editarevent']">Editar evento</button>
-              <button class="btn btn-delete"  (click)="borrar()">Eliminar evento</button>
-            </td>
+          <tr *ngFor="let evento of eventos">
+            <td >{{evento.descripcion}}</td>
+            <td >{{evento.fecha}}</td>
+            <td >{{evento.url}}</td>
+            <td >{{evento.imagen}}</td>
+            <td >{{evento.instrucciones}}</td>
+
           </tr>
           
           

@@ -8,7 +8,8 @@ export class Donacion {
     fecha_act: string = "";
     validado: boolean= true;
     status: string="";
-    usuarioos: Usuarioo []=[];
+    usuario: Usuarioo=new Usuarioo();
+    usuarioo: Usuarioo = new Usuarioo();
     
    
 }

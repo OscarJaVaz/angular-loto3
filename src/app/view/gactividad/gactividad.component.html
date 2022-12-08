@@ -43,136 +43,20 @@
       <table>
         <thead>
           <tr>
-            <th>Nombre de la actividad</th>
-            <th>Descripcion </th>
-            <th>Status</th>
-            <th>Acciones</th>
+            <th>Id de la actividad </th>
+            <th>Nombre de la actividad  </th>
+            <th>Horario </th>
+            <th>Cupo</th>
           </tr>
         </thead>
+        
         <tbody>
-          <tr>
-            <td>
-              <a href="#">Yoga</a>
-            </td>
-            <td class="desc">DOCTRINA FILOSÓFICA HINDÚ QUE SE BASA EN UNA 
-                SERIE DE EJERCICIOS ESPITITUALES Y 
-                FISICOS PARA LIBERAR LAS TENSIONES
-                 DEL CUERPO</td>
-            <td>Disponible</td>
-            
-            
-            <td>
-              <button class="btn" [routerLink]="['/editaractividad']">Editar actividad</button>
-              <button class="btn btn-delete">Eliminar actividad</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#">Defensa Personal infantil</a>
-            </td>
-            <td class="desc">CONJUNTO DE HABILIDADES TÉCNICO- TACTICAS ENCAMINADAS A IMPEDIR O 
-                REPELER UNA AGRESIÓN REALIZADAS POR UNO MISMO Y PARA SÍ MISMO.</td>
-            <td>Disponible</td>
-            
-            <td>
-              <button class="btn" [routerLink]="['/editaractividad']">Editar actividad</button>
-              <button class="btn btn-delete">Eliminar actividad</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#">Tejido</a>
-            </td>
-            <td class="desc">ACTIVIDAD DE ELABORAR MANUALIDADES A TRAVÉS DE TEJIDOS 
-                Y BORDADOS DE TELA E HILO.</td>
-            <td>Disponible</td>
-            
-            <td>
-              <button class="btn" [routerLink]="['/editaractividad']">Editar actividad</button>
-              <button class="btn btn-delete">Eliminar actividad</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#">Meditacion</a>
-            </td>
-            <td class="desc">PENSAMIENTO O CONSIDERACIÓN DE ALGO CON ATENCIÓN Y 
-                DETENIMIENTO PARA ESTUDIARLO O COMPRENDERLO BIEN.</td>
-            <td>Disponible</td>
-            
-            <td>
-              <button class="btn" [routerLink]="['/editaractividad']">Editar actividad</button>
-              <button class="btn btn-delete">Eliminar actividad</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#">Reciclado</a>
-            </td>
-            <td class="desc">PROCESO CUYO OBJETIVO ES ELABORAR 
-                MANUALIDADES A PARTIR DE PRODUCTOS YA CREADOS.</td>
-            <td>Disponible</td>
-            
-            <td>
-              <button class="btn" [routerLink]="['/editaractividad']">Editar actividad</button>
-              <button class="btn btn-delete">Eliminar actividad</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#">Tanatologia</a>
-            </td>
-            <td class="desc">DISCIPLINA INTEGRAL QUE ABORDA TODO LO RELACIONADO CON EL FENOMENO DE LA MUERTE EN EL SER HUMANO: 
-                LA PÉRDIDA, EL SUFRIMIENTO PSICOLÓGICO Y LAS RELACIONES SIGNIFICATIVAS DEL ENFERMO.</td>
-            <td>Disponible</td>
-            
-            <td>
-              <button class="btn" [routerLink]="['/editaractividad']">Editar actividad</button>
-              <button class="btn btn-delete">Eliminar actividad</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#">Pintura y repujado</a>
-            </td>
-            <td class="desc">TÉCNICA ARTESANAL QUE CONSISTE EN TRABAJAR PLANCHAS DE METAL, 
-                CUERO U OTROS MATERIALES MALEABLES, PARA OBTENER UNA FIGURA ORNAMENTAL EN RELIEVE.</td>
-            <td>Disponible</td>
-            
-            <td>
-              <button class="btn" [routerLink]="['/editaractividad']">Editar actividad</button>
-              <button class="btn btn-delete">Eliminar actividad</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#">Baile</a>
-            </td>
-            <td class="desc">LA DANZA O EL BAILE ES UN ARTE DONDE SE UTILIZA EL MOVIMIENTO DEL CUERPO 
-                USUALMENTE CON MÚSICA, COMO UNA FORMA DE EXPRESIÓN Y DE INTERACCIÓN SOCIAL, CON FINES
-                 DE ENTRETENIMIENTO, ARTÍSTICOS O RELIGIOSOS.
+          <tr *ngFor="let actividad of actividades">
+            <td >{{actividad.id_actividad}}</td>
+            <td >{{actividad.nombre}}</td>
+            <td >{{actividad.horario}}</td>
+            <td >{{actividad.cupo}}</td>
 
-            </td>
-            <td>Disponible</td>
-            
-            <td>
-              <button class="btn" [routerLink]="['/editaractividad']">Editar actividad</button>
-              <button class="btn btn-delete">Eliminar actividad</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#">Computacion</a>
-            </td>
-            <td class="desc">CIENCÍA ENCARGADA DE ELABORACIÓN Y DESARROLLO DE LÓGICA A PARTIR DE ACTIVIDADES GUIADAS.
-
-            </td>
-            <td>Disponible</td>
-            
-            <td>
-              <button class="btn" [routerLink]="['/editaractividad']">Editar actividad</button>
-              <button class="btn btn-delete">Eliminar actividad</button>
-            </td>
           </tr>
         </tbody>
       </table>

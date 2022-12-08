@@ -7,7 +7,7 @@ import { Donacion } from 'src/app/models/donacion';
 import { DonacionService } from 'src/app/service/donacion.service';
 import { UsuarioService } from 'src/app/service/usuario.service';
 import { Usuarioo } from 'src/app/models/usuarioo';
-import {forkJoin} from "rxjs";
+import {forkJoin, observable, pipe} from "rxjs";
 
 
 @Component({
@@ -19,26 +19,26 @@ export class CreardonComponent implements OnInit {
 
   public donacion: Donacion = new Donacion ();
   public usuarioos: Usuarioo []=[];
+  data:any="";
 
 
   constructor(private title:Title,
     private donacionService:DonacionService,
     private usuarioService:UsuarioService,
               private spinner: NgxSpinnerService,
+              private route: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit(): void {
     this.title.setTitle("Donativos");
-    this.getData();
-    
+      this.getData();
   }
 
-
- // private getData() {
-    //this.spinner.show().then(() => {
-     // let usuarioosGet = this.usuarioService.getUser();
-     // forkJoin([usuarioosGet]).subscribe({
-      /*  next: response => {
+  private getData() {
+    this.spinner.show().then(() => {
+      let usuarioosGet = this.usuarioService.getUser();
+      forkJoin([usuarioosGet]).subscribe({
+       next: response => {
           this.usuarioos = response[0] as Usuarioo[];
           
           this.spinner.hide().then(() => {
@@ -51,9 +51,12 @@ export class CreardonComponent implements OnInit {
       });
   });
 
-}*/
+}
+    
 
-private getData() {
+
+
+/*private getData() {
   this.spinner.show().then(() => {
     this.usuarioService.getUser().subscribe({
       next: value => {
@@ -64,10 +67,13 @@ private getData() {
       }
     });
   });
-}
+}*/
 
   nuevo() {
     this.spinner.show().then(() => {
+      let usuario:Usuarioo=new Usuarioo();
+      usuario.id_usuario = this.data;
+      this.donacion.usuario = usuario;
       this.donacionService.nuevo(this.donacion).subscribe({
         next: () => {
           swal.fire('', 'Donacion almacenada con éxito', 'success').then(() => {
@@ -89,6 +95,10 @@ private getData() {
       )
     );
       }
+
+
+   
+
 
 
 }

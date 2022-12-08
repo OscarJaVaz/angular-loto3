@@ -4,6 +4,7 @@ import {NgxSpinnerService} from "ngx-spinner";
 import {Router} from "@angular/router";
 import { EventoService } from 'src/app/service/evento.service';
 import { Evento } from 'src/app/models/evento';
+import {forkJoin, observable, pipe} from "rxjs";
 
 @Component({
   selector: 'app-geventos',
@@ -13,16 +14,34 @@ import { Evento } from 'src/app/models/evento';
 export class GeventosComponent implements OnInit {
 
   evento: Evento =new Evento();
+  public eventos: Evento []=[];
 
   constructor(private eventoService: EventoService,
     private spinner: NgxSpinnerService,
     private router: Router) { }
 
   ngOnInit(): void {
-    this.eventoService.getEvento().subscribe(
-      e => this.evento =e
-    );
+    this.getData();
   }
+
+  private getData() {
+    this.spinner.show().then(() => {
+      let eventosGet = this.eventoService.getEvento();
+      forkJoin([eventosGet]).subscribe({
+       next: response => {
+          this.eventos = response[0] as Evento[];
+          
+          this.spinner.hide().then(() => {
+          });
+        },
+        complete: () => {
+          this.spinner.hide().then(() => {
+          });
+        }
+      });
+  });
+
+}
 
 
   borrar():void{

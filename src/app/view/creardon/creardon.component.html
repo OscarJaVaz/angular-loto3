@@ -53,12 +53,10 @@
         <input type='boolean' class="form-control" placeholder='Validado: ' required="required" name="validado" id="validado" [(ngModel)]="donacion.validado" />
         <input type='number' class="form-control" placeholder='Status: ' required="required" name="status" id="status" [(ngModel)]="donacion.status" />
         <input type='text' value="0" class="form-control" placeholder='Escriba el nombre de un Usuario: ' />
-        <select class="form-control" required="required"  name="usuarioos" id="usuarioos"
-         [(ngModel)]="donacion.usuarioos.id_usuario">
-          <option  class="obscuro">Seleccione un Usuario</option>
+        <select class="form-control" required="required"  name="usuarioo" id="usuarioo" [(ngModel)]="data">
+          <option value="0" class="obscuro">Seleccione un Usuario</option>
           <option class="obscuro" *ngFor="let usuarioo of usuarioos" [value]="usuarioo.id_usuario">{{usuarioo.nombre}}</option>
         </select>
-
  
 	 
 	

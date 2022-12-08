@@ -5,7 +5,7 @@ import {NgxSpinnerService} from "ngx-spinner";
 import {Router} from "@angular/router";
 import {Observable} from "rxjs";
 import { Constants } from "../constants/constants";
-import { constants } from "buffer";
+
 
 
 @Injectable({
@@ -41,14 +41,10 @@ export class AuthService {
   guardarUsuarioo(accessToken: string) {
     const payload = this.obtenerDatosToken(accessToken);
     this._usuarioo = new Usuarioo();
-    this._usuarioo.nombre = payload.nombre;
-    this._usuarioo.apellido = payload.apellido;
-    this._usuarioo.fecha_creaci = payload._fecha_creaci;
-    this._usuarioo.correo = payload.correo;
-    this._usuarioo.status = payload.status;
+    this._usuarioo.correo = payload.user_name;
+    this._usuarioo.id_usuario = payload.id_usuario;
     this._usuarioo.telefono = payload.telefono;
-    this._usuarioo.fecha_actual = payload.fecha_actual;
-    this._usuarioo.genero = payload.genero;
+    this._usuarioo.nombre = payload.nombre;
 
     localStorage.setItem('user_fundacion', JSON.stringify(this._usuarioo));
   }

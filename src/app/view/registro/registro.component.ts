@@ -24,7 +24,7 @@ export class RegistroComponent implements OnInit {
     
   }
 
-  guardar() {
+  nuevo() {
     this.spinner.show().then(() => {
       this.usuarioService.nuevo(this.usuarioo).subscribe({
         next: () => {

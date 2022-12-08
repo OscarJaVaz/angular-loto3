@@ -50,4 +50,7 @@ export class GdonadoresComponent implements OnInit {
       )
     );
   }
+
+  generatePdf() {
+  }
 }
