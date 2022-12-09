@@ -79,7 +79,7 @@ export class GactividadComponent implements OnInit {
 }*/
 
 
-
+/*ELIMINAR BY OSCAR*/
 
 /*delete(id_actividad){
   if(confirm('Seguro que desea eliminar')){
@@ -93,7 +93,6 @@ export class GactividadComponent implements OnInit {
 
 }*/
 
-/*ELIMINAR BY OSCAR*/
 delete(id_actividad) {
   this.spinner.show().then(() => {
     this.actividadService.delete(id_actividad).subscribe({

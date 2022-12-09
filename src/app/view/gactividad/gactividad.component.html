@@ -43,16 +43,17 @@
       <table>
         <thead>
           <tr>
-            <th>ID_ACTIVIDAD</th>
+            
             <th>Nombre de la actividad  </th>
             <th>Horario </th>
             <th>Cupo</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         
         <tbody>
           <tr *ngFor="let actividad of actividades"  >
-            <td>{{actividad.id_actividad}}</td>
+           
             <td >{{actividad.nombre}}</td>
             <td >{{actividad.horario}}</td>
             <td >{{actividad.cupo}}</td>

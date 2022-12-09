@@ -55,7 +55,7 @@ export class ActividadService {
   }*/
 
   /*ELIMINAR BY OSCAR*/
-  delete(id_actividad: number):Observable<any>{
+  delete(id_actividad: number){
     return this.http.delete(Constants.HOST + '/actividad/delete' + id_actividad).pipe(
       map(value => {
         return value;
